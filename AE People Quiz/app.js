@@ -10,7 +10,7 @@ const imageDictionary = {
     'John Lennon' : 'John_Lennon.jpg',
     'John Milton' : 'John_Milton.jpg',
     'Martin Luther King': "Martin_Luther_King.jpg"
-    
+    // ABCDEFGHIJKLMNOPQRSTUVWXYZ
     // Füge hier weitere Einträge hinzu
     // Hier muss noch eingefügt werde, dass man verschiedenes eingeben kann.
     // Hier sollte man das eleganter mit einer Datei lösen.
