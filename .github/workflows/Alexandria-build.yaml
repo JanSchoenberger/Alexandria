@@ -14,7 +14,8 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: ./AE_Homepage
+  DEPLOYMENT_FOLDER: 
+  #./AE_Homepage
 
 jobs:
 # Please do not rename this job
