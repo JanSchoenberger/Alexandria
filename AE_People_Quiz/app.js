@@ -142,7 +142,7 @@ function showSolution() {
     }
 
 async function readJSON() {
-        const response = await fetch('./images/image_dictionary.json');
+        const response = await fetch('image_dictionary.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
