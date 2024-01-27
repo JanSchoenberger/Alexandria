@@ -41,6 +41,24 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 });
 
+// Zugriff auf das select-Element
+const categorySelect = document.getElementById('category-select');
+
+// Hinzufügen eines Event-Listeners für das change-Event
+categorySelect.addEventListener('change', async function() {
+    // Zugriff auf den Wert der ausgewählten Option
+    const selectedCategory = this.value;
+    console.log(selectedCategory);
+    // Pfad zur JSON-Datei basierend auf der ausgewählten Kategorie
+    const jsonFilePath = `./kategories/${selectedCategory}.json`;
+    // Aufruf der readJSON-Funktion mit dem Pfad zur JSON-Datei
+    await readJSON(jsonFilePath);
+    // Es muss auch noch eine Random Kateogrie ausgewählt werden.
+});
+
+
+
+
 document.addEventListener('keydown', function(event) {
     // Check if the pressed key is 'i' and the control key is held down
     if (event.key === 'i' && event.ctrlKey) {
@@ -142,7 +160,9 @@ function showSolution() {
     }
 
 async function readJSON() {
-        const response = await fetch('image_dictionary.json');
+
+
+        const response = await fetch('./kategories/painter.json'); //image_dictionary.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
