@@ -8,6 +8,8 @@ const nameForm = document.getElementById('name-form');
 const personNameInput = document.getElementById('text_input');
 const scoreboardSpan = document.getElementById('score');
 const keys = Object.keys(imageDictionary);
+const categorySelect = document.getElementById('category-select');
+
 
 document.addEventListener('DOMContentLoaded', async function () {
     // Wird hier die Funktion doppelt ausgeführt ? -> Debuggen.
@@ -41,8 +43,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 });
 
-// Zugriff auf das select-Element
-const categorySelect = document.getElementById('category-select');
 
 // Hinzufügen eines Event-Listeners für das change-Event
 categorySelect.addEventListener('change', async function() {
@@ -55,8 +55,6 @@ categorySelect.addEventListener('change', async function() {
     await readJSON(jsonFilePath);
     // Es muss auch noch eine Random Kateogrie ausgewählt werden.
 });
-
-
 
 
 document.addEventListener('keydown', function(event) {
@@ -85,7 +83,7 @@ document.addEventListener('keydown', function(event) {
 
 document.addEventListener('keydown', function(event) {
     
-    if (event.key === 'i' && event.ctrlKey) {
+    if (event.key === 'a' && event.ctrlKey) {
         // Prevent the default action to avoid possible conflicts with browser shortcuts
         event.preventDefault();
 
@@ -94,7 +92,6 @@ document.addEventListener('keydown', function(event) {
         searchWikipedia();
     }
 });
-
 
   // Funktion zur Überprüfung des eingegebenen Namens
 function checkName() {
@@ -160,7 +157,7 @@ function showSolution() {
     }
 
 async function readJSON() {
-
+    
         const response = await fetch('image_dictionary.json');
        // const response = await fetch('./kategories/painter.json'); //image_dictionary.json');
         if (!response.ok) {
@@ -169,3 +166,11 @@ async function readJSON() {
         const data = await response.json();
         imageDictionary = data;
     }
+
+function searchWikipedia() {
+        
+        const currentImageSrc = imageContainer.querySelector('img').src;
+        const currentImageName = Object.keys(imageDictionary).find(key => imageDictionary[key] === currentImageSrc.split('/').pop());
+        const url = "https://de.wikipedia.org/wiki/" + currentImageName;
+        window.open(url, '_blank');
+        }

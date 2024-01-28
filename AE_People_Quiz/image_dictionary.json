@@ -1,6 +1,4 @@
 {
-
-
     "Abraham Lincoln" : "Abraham_Lincoln.jpg",
     "Albert Camus": "Albert_Camus.jpeg",
     "Albert Einstein": "Albert_Einstein.jpg",
@@ -21,20 +19,35 @@
     "Bertrand Russell" : "Bertrand_Russell.jpg",
     "Bertolt Brecht" : "Bertolt_Brecht.jpeg",
     "Bruce Lee" : "Bruce_Lee.jpg",
+
     "Carl Friedrich Gauss": "Carl_Friedrich_Gauss.jpeg",
     "Carl Gustav Jung": "Carl_Gustav_Jung.jpeg",
     "Charles Darwin": "Charles_Darwin.jpg",
     "Charlie Munger": "Charlie_Munger.jpeg",
     "Christian Dior": "Christian_Dior.jpeg",
-    
+    "Chillian Murphy": "Chillian_Murphy.jpeg",
+
     "Elon Musk": "Elon_Musk.jpg",
+    "Erasmus von Rotterdam": "Erasmus_von_Rotterdam.jpeg",
+    "Ernest Hemingway": "Ernest_Hemingway.jpeg",
+    "Erwin Schrödinger": "Erwin_Schrödinger.jpeg",
+    "Ernst Bloch": "Ernst_Bloch.jpeg",
+    "Ernst Jünger": "Ernst_Jünger.jpeg",
+    "Ernst Ludwig Kirchner": "Ernst_Ludwig_Kirchner.jpeg",
+    "Ernst Toller": "Ernst_Toller.jpeg",
+    "Ernst von Siemens": "Ernst_von_Siemens.jpeg",
+    "Ernst Zermelo": "Ernst_Zermelo.jpeg",
+    "Ernst Zürcher": "Ernst_Zürcher.jpeg",
+    
     "Friedrich Nietzsche": "Friedrich_Nietzsche.jpeg",
     "Friedrich Schiller": "Friedrich_Schiller.jpeg",
+
     "Galileo Galilei": "Galileo_Galilei.jpg",
     "George Orwell": "George_Orwell.jpeg",
     "George Washington": "George_Washington.jpeg",
     "Gianni Versace": "Gianni_Versace.jpeg",
     "Gottfried Wilhelm Leibniz": "Gottfried_Wilhelm_Leibniz.jpg",
+
     "Hans Rosling": "Hans_Rosling.jpeg",
     "Henry Ford": "Henry_Ford.jpeg",
     
@@ -45,7 +58,13 @@
     "J.R.R Tolkin" : "J_R_R_Tolkin.jpg",
     "John Lennon" : "John_Lennon.jpg",
     "John Milton" : "John_Milton.jpg",
+
     "Linus Torvalds" : "Linus_Torvalds.jpg",
+    "Leonardo da Vinci": "Leonardo_da_Vinci.jpeg",
+    "Ludwig van Beethoven": "Ludwig_van_Beethoven.jpeg",
+    "Ludwig Wittgenstein": "Ludwig_Wittgenstein.jpeg",
+
+    "Mahatma Gandhi": "Mahatma_Gandhi.jpeg",
     "Marie Curie" : "Marie_Curie.jpeg",
     "Martin Luther King": "Martin_Luther_King.jpg",
     "Martin Luther": "Martin_Luther.jpg",
@@ -59,6 +78,7 @@
     "Miguel de Cervantes": "Miguel_de_Cervantes.jpeg",
     "Moses": "Moses.jpg",
     "Muhammad Ali": "Muhammad_Ali.jpg",
+
     "Napoleon Bonaparte": "Napoleon_Bonaparte.jpeg",
     "Nelson Mandela": "Nelson_Mandela.jpeg",
     "Neil Armstrong": "Neil_Armstrong.jpeg",
@@ -86,32 +106,46 @@
     "Rudolf Virchow": "Rudolf_Virchow.jpeg",
     "Rudyard Kipling": "Rudyard_Kipling.jpeg",
     "Richard Stallman": "Richard_Stallman.jpeg",
+
     "Sigmund Freud": "Sigmund_Freud.jpeg",
     "Sokrates": "Sokrates.jpeg",
     "Sophie Scholl": "Sophie_Scholl.jpeg",
     "Steve Jobs": "Steve_Jobs.jpeg",
-    "Steve Woziak": "Steve_Woziak.jpeg",
+    "Steve Wozniak": "Steve_Wozniak.jpeg",
     "Steven Pinker": "Steven_Pinker.jpeg",
     "Steven Spielberg": "Steven_Spielberg.jpeg",
     "Stephen Hawking": "Stephen_Hawking.jpeg",
+    "Stephen King": "Stephen_King.jpeg",
+    "Stephen Wolfram": "Stephen_Wolfram.jpeg",
+    "Sylvester Stallone": "Sylvester_Stallone.jpeg",
+
     "Tim Berners-Lee": "Tim_Berners_Lee.jpeg",
     "Thomas Alva Edison": "Thomas_Alva_Edison.jpeg",
     "Thomas Jefferson": "Thomas_Jefferson.jpeg",
     "Thomas Mann": "Thomas_Mann.jpeg",
     "Thomas Paine": "Thomas_Paine.jpeg",
     "Thomas von Aquin": "Thomas_von_Aquin.jpeg",
+
     "Victor Hugo": "Victor_Hugo.jpeg",
     "Voltaire": "Voltaire.jpeg",
     "Vincent van Gogh": "Vincent_van_Gogh.jpeg",
+    "Vladimir Lenin": "Vladimir_Lenin.jpeg",
+    "Vladimir Putin": "Vladimir_Putin.jpeg",
+    "Volker Pispers": "Volker_Pispers.jpeg",
+    "Volker Schlöndorff": "Volker_Schlöndorff.jpeg",
+    "Volker Strübing": "Volker_Strübing.jpeg",
+    "Volker Weidermann": "Volker_Weidermann.jpeg",
+    "Volker Zastrow": "Volker_Zastrow.jpeg",
+    "Volker Zerbe": "Volker_Zerbe.jpeg",
+    "Volker Zill": "Volker_Zill.jpeg",
+    
     "Warren Buffett": "Warren_Buffett.jpeg",
     "Winston Churchill": "Winston_Churchill.jpg",
     "Wolfgang Amadeus Mozart": "Wolfgang_Amadeus_Mozart.jpeg",
     "William Shakespeare": "William_Shakespeare.jpeg",
     "Walt Disney": "Walt_Disney.jpeg",
     "Werner Heisenberg": "Werner_Heisenberg.jpeg",
+
     "Yves Saint Laurent": "Yves_Saint_Laurent.jpeg"
-    
-    
-    
 
 }
