@@ -10,12 +10,24 @@ const scoreboardSpan = document.getElementById('score');
 const keys = Object.keys(imageDictionary);
 const categorySelect = document.getElementById('category-select');
 
+categorySelect.addEventListener('change', async function() {
+    localStorage.setItem('selectedCategory', this.value);
+    await readJSON(this.value);
+    remainingImages = Object.keys(imageDictionary);
+    showRandomImage();
+});
+
+
 
 document.addEventListener('DOMContentLoaded', async function () {
     // Wird hier die Funktion doppelt ausgeführt ? -> Debuggen.
-    await readJSON();
+    const selectedCategory = localStorage.getItem('selectedCategory');
+    if (selectedCategory) {
+        categorySelect.value = selectedCategory;
+    }
+    await readJSON(categorySelect.value);
     remainingImages = Object.keys(imageDictionary);
-    showRandomImage()
+    showRandomImage();
     personNameInput.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
             event.preventDefault(); // Verhindert das Absenden des Formulars
@@ -38,12 +50,9 @@ document.addEventListener('DOMContentLoaded', async function () {
         searchWikipedia();
     });
 
-    
-
-
 });
 
-
+/*
 // Hinzufügen eines Event-Listeners für das change-Event
 categorySelect.addEventListener('change', async function() {
     // Zugriff auf den Wert der ausgewählten Option
@@ -52,10 +61,11 @@ categorySelect.addEventListener('change', async function() {
     // Pfad zur JSON-Datei basierend auf der ausgewählten Kategorie
     const jsonFilePath = `./kategories/${selectedCategory}.json`;
     // Aufruf der readJSON-Funktion mit dem Pfad zur JSON-Datei
+    location.reload();
     await readJSON(jsonFilePath);
     // Es muss auch noch eine Random Kateogrie ausgewählt werden.
 });
-
+*/
 
 document.addEventListener('keydown', function(event) {
     // Check if the pressed key is 'i' and the control key is held down
@@ -156,15 +166,30 @@ function showSolution() {
             alert(currentImageName);
     }
 
-async function readJSON() {
-    
-        const response = await fetch('image_dictionary.json');
-       // const response = await fetch('./kategories/painter.json'); //image_dictionary.json');
-        if (!response.ok) {
+async function readJSON(filePath) {
+        console.log(filePath);
+        if (filePath === "random") {
+            const response = await fetch('image_dictionary.json');
+            const data = await response.json();
+            imageDictionary = data;
+
+            // const response = await fetch('./kategories/painter.json'); //image_dictionary.json');
+            if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const data = await response.json();
-        imageDictionary = data;
+        }
+
+    
+        
+        else {
+            const response = await fetch(`./kategories/${filePath}.json`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            imageDictionary = data;
+        }
+
     }
 
 function searchWikipedia() {
