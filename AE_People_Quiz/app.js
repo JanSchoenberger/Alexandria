@@ -149,15 +149,15 @@ function updateAmazonLink() {
 function updateAudibleLink() {  
     const currentImageSrc = imageContainer.querySelector('img').src;
     const currentImageName = Object.keys(imageDictionary).find(key => imageDictionary[key] === currentImageSrc.split('/').pop());
-    const baseUrl = 'https://www.youtube.com/results?search_query=';
-    youtubeButton.href = baseUrl + encodeURIComponent(currentImageName);
+    const baseUrl = 'https://www.amazon.de/gp/search?ie=UTF8&tag=alexandriaedu-21&linkCode=ur2&linkId=072e2026fa90f9d3ba63312352418bed&camp=1638&creative=6742&index=audible&keywords=';
+    audibleButton.href = baseUrl + encodeURIComponent(currentImageName);
 }
 
 function updateYoutubeLink() {  
     const currentImageSrc = imageContainer.querySelector('img').src;
     const currentImageName = Object.keys(imageDictionary).find(key => imageDictionary[key] === currentImageSrc.split('/').pop());
-    const baseUrl = 'https://www.amazon.de/gp/search?ie=UTF8&tag=alexandriaedu-21&linkCode=ur2&linkId=072e2026fa90f9d3ba63312352418bed&camp=1638&creative=6742&index=audible&keywords=';
-    audiblebutton.href = baseUrl + encodeURIComponent(currentImageName);
+    const baseUrl = 'https://www.youtube.com/results?search_query=';
+    youtubeButton.href = baseUrl + encodeURIComponent(currentImageName);
 }
 
 // Funktion zum Anzeigen eines zufälligen Bildes
