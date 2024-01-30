@@ -1,9 +1,9 @@
 //import confetti from 'canvas-confetti';
 
-let imageDictionary = {};
 let lastDisplayedImageName= "";
 let remainingImages = [];
 let score = 0;
+let imageDictionary = {};
 
 const imageContainer = document.getElementById('image-container');
 const nameForm = document.getElementById('name-form');
@@ -13,6 +13,14 @@ const keys = Object.keys(imageDictionary);
 const categorySelect = document.getElementById('category-select');
 const amazonLink = document.getElementById('amazonBuecherKaufen');
 const youtubeLink = document.getElementById('youtubeVideos');
+const audibleLink = document.getElementById('audibleHoerbuecher');
+
+var solutionButton = document.getElementById('solutionButton');
+var wikipediaButton = document.getElementById('wikipediaButton');
+var amazonButton = document.getElementById('amazonButton');
+var audibleButton = document.getElementById('audibleButton');
+var youtubeButton = document.getElementById('youtubeButton');
+
 
 // Auswahl der Kategorie:
 categorySelect.addEventListener('change', async function() {
@@ -34,9 +42,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     await readJSON(categorySelect.value);
     remainingImages = Object.keys(imageDictionary);
     showRandomImage();
-    updateAmazonLink();
-    updateYoutubeLink();
-
 
     personNameInput.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
@@ -45,19 +50,26 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     });
 
-    var solutionButton = document.getElementById('solutionButton');
-    
     solutionButton.addEventListener('click', function() {
 
         showSolution();
 
     });
 
-
-    var wikipediaButton = document.getElementById('wikipediaButton');
-
     wikipediaButton.addEventListener('click', function() {
         searchWikipedia();
+    });
+
+    amazonButton.addEventListener('click', function() {
+        updateAmazonLink();
+    });
+
+    audibleButton.addEventListener('click', function() {
+        updateAudibleLink();
+    });
+
+    youtubeButton.addEventListener('click', function() {
+        updateYoutubeLink();
     });
 
 });
@@ -131,14 +143,21 @@ function updateAmazonLink() {
     const currentImageSrc = imageContainer.querySelector('img').src;
     const currentImageName = Object.keys(imageDictionary).find(key => imageDictionary[key] === currentImageSrc.split('/').pop());
     const baseUrl = 'https://www.amazon.de/gp/search?ie=UTF8&tag=alexandriaedu-21&linkCode=ur2&linkId=c785fd90e5b1a810d923555ed9945769&camp=1638&creative=6742&index=books&keywords=';
-    amazonLink.href = baseUrl + encodeURIComponent(currentImageName);
+    amazonButton.href = baseUrl + encodeURIComponent(currentImageName);
 }
 
-function updateYoutubeLink(personName) {  
+function updateAudibleLink() {  
     const currentImageSrc = imageContainer.querySelector('img').src;
     const currentImageName = Object.keys(imageDictionary).find(key => imageDictionary[key] === currentImageSrc.split('/').pop());
     const baseUrl = 'https://www.youtube.com/results?search_query=';
-    youtubeLink.href = baseUrl + encodeURIComponent(currentImageName);
+    youtubeButton.href = baseUrl + encodeURIComponent(currentImageName);
+}
+
+function updateYoutubeLink() {  
+    const currentImageSrc = imageContainer.querySelector('img').src;
+    const currentImageName = Object.keys(imageDictionary).find(key => imageDictionary[key] === currentImageSrc.split('/').pop());
+    const baseUrl = 'https://www.amazon.de/gp/search?ie=UTF8&tag=alexandriaedu-21&linkCode=ur2&linkId=072e2026fa90f9d3ba63312352418bed&camp=1638&creative=6742&index=audible&keywords=';
+    audiblebutton.href = baseUrl + encodeURIComponent(currentImageName);
 }
 
 // Funktion zum Anzeigen eines zufälligen Bildes
