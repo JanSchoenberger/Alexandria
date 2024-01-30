@@ -167,7 +167,6 @@ function showSolution() {
     }
 
 async function readJSON(filePath) {
-        console.log(filePath);
         if (filePath === "random") {
             const response = await fetch('image_dictionary.json');
             const data = await response.json();
