@@ -1,3 +1,5 @@
+//import confetti from 'canvas-confetti';
+
 let imageDictionary = {};
 let lastDisplayedImageName= "";
 let remainingImages = [];
@@ -9,7 +11,10 @@ const personNameInput = document.getElementById('text_input');
 const scoreboardSpan = document.getElementById('score');
 const keys = Object.keys(imageDictionary);
 const categorySelect = document.getElementById('category-select');
+const amazonLink = document.getElementById('amazonBuecherKaufen');
+const youtubeLink = document.getElementById('youtubeVideos');
 
+// Auswahl der Kategorie:
 categorySelect.addEventListener('change', async function() {
     localStorage.setItem('selectedCategory', this.value);
     await readJSON(this.value);
@@ -17,17 +22,22 @@ categorySelect.addEventListener('change', async function() {
     showRandomImage();
 });
 
-
-
+// Bei Laden der Webseite:
 document.addEventListener('DOMContentLoaded', async function () {
-    // Wird hier die Funktion doppelt ausgeführt ? -> Debuggen.
+    
     const selectedCategory = localStorage.getItem('selectedCategory');
+
     if (selectedCategory) {
         categorySelect.value = selectedCategory;
     }
+
     await readJSON(categorySelect.value);
     remainingImages = Object.keys(imageDictionary);
     showRandomImage();
+    updateAmazonLink();
+    updateYoutubeLink();
+
+
     personNameInput.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
             event.preventDefault(); // Verhindert das Absenden des Formulars
@@ -52,21 +62,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 });
 
-/*
-// Hinzufügen eines Event-Listeners für das change-Event
-categorySelect.addEventListener('change', async function() {
-    // Zugriff auf den Wert der ausgewählten Option
-    const selectedCategory = this.value;
-    console.log(selectedCategory);
-    // Pfad zur JSON-Datei basierend auf der ausgewählten Kategorie
-    const jsonFilePath = `./kategories/${selectedCategory}.json`;
-    // Aufruf der readJSON-Funktion mit dem Pfad zur JSON-Datei
-    location.reload();
-    await readJSON(jsonFilePath);
-    // Es muss auch noch eine Random Kateogrie ausgewählt werden.
-});
-*/
-
+// Shotcut Fokus auf das Eingabefeld:
 document.addEventListener('keydown', function(event) {
     // Check if the pressed key is 'i' and the control key is held down
     if (event.key === 'i' && event.ctrlKey) {
@@ -79,6 +75,7 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+// Shotcut Lösung anzeigen:
 document.addEventListener('keydown', function(event) {
     // Check if the pressed key is 'i' and the control key is held down
     if (event.key === 's' && event.ctrlKey) {
@@ -91,6 +88,7 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+// Shotcut Wikipedia:
 document.addEventListener('keydown', function(event) {
     
     if (event.key === 'a' && event.ctrlKey) {
@@ -112,30 +110,42 @@ function checkName() {
 
     if (enteredName === currentImageName) {
     
-        //alert('Richtig! Der eingegebene Name ist korrekt.');
         personNameInput.value = "";
         increaseScore();
         showRandomImage();
+
     } 
     else {
     
         alert('Falsch! Der eingegebene Name ist nicht korrekt.');
-        score = 0;
-        scoreboardSpan.textContent = score;
+        // score = 0;
+        // scoreboardSpan.textContent = score;
         personNameInput.value = "";
 
     }
 
     }
 
+// Aktualisieren des Links, wenn eine neue Person angezeigt wird
+function updateAmazonLink() {
+    const currentImageSrc = imageContainer.querySelector('img').src;
+    const currentImageName = Object.keys(imageDictionary).find(key => imageDictionary[key] === currentImageSrc.split('/').pop());
+    const baseUrl = 'https://www.amazon.de/gp/search?ie=UTF8&tag=alexandriaedu-21&linkCode=ur2&linkId=c785fd90e5b1a810d923555ed9945769&camp=1638&creative=6742&index=books&keywords=';
+    amazonLink.href = baseUrl + encodeURIComponent(currentImageName);
+}
+
+function updateYoutubeLink(personName) {  
+    const currentImageSrc = imageContainer.querySelector('img').src;
+    const currentImageName = Object.keys(imageDictionary).find(key => imageDictionary[key] === currentImageSrc.split('/').pop());
+    const baseUrl = 'https://www.youtube.com/results?search_query=';
+    youtubeLink.href = baseUrl + encodeURIComponent(currentImageName);
+}
+
 // Funktion zum Anzeigen eines zufälligen Bildes
 function showRandomImage() {
     
-    console.log(remainingImages);
-    if (remainingImages.length === 0) {
-        alert('Alle Bilder wurden angezeigt.');
-        return;
-    }
+    
+    checkDone(remainingImages);
 
     let randomIndex = Math.floor(Math.random() * remainingImages.length);
     let randomKey = remainingImages[randomIndex];
@@ -152,7 +162,30 @@ function showRandomImage() {
     imageContainer.innerHTML = ''; // Clear the image container
     imageContainer.appendChild(imageElement); // Append the new image to the image container
 
+    //updateAmazonLink(currentImageName);
+    updateYoutubeLink    
+
     }
+
+function checkDone(remainingImages) {
+
+    if (remainingImages.length === 0) {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+
+        });
+
+        const playAgain = confirm('Alle Bilder wurden erraten! Möchten Sie nochmal spielen?');
+        if (playAgain) {
+            // Hier laden Sie die Bilder neu
+            remainingImages = [...keys]; // Kopieren Sie alle Schlüssel aus dem imageDictionary in remainingImages
+            score = 0; // Setzen Sie den Score zurück
+            scoreboardSpan.textContent = score; // Aktualisieren Sie die Anzeige des Scores
+            showRandomImage();
+        }
+}}
 
 function increaseScore() {
         score++;
@@ -197,4 +230,7 @@ function searchWikipedia() {
         const currentImageName = Object.keys(imageDictionary).find(key => imageDictionary[key] === currentImageSrc.split('/').pop());
         const url = "https://de.wikipedia.org/wiki/" + currentImageName;
         window.open(url, '_blank');
-        }
+    }
+
+
+

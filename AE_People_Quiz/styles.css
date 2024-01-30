@@ -1,5 +1,5 @@
 body {
-    background-image: url("images/Library_of_Alexandria_Background.jpg");
+    background-image: url("images/Library_of_Alexandria_Background.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@ body {
 
 
 body {
-    background-image: url("images/Library_of_Alexandria_Background.jpg");
+    background-image: url("images/Library_of_Alexandria_Background.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -124,4 +124,15 @@ nav ul li a:hover {
     font-size: 1.5em; /* Larger text */
     width: 50vw; /* Set the width to 50% of the viewport width */
     margin: 0 auto; /* This will center the highscore container */
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Erlaubt den Buttons, in die nächste Zeile zu rücken, wenn der Platz nicht ausreicht */
+}
+
+button {
+    border-radius: 15px; /* Fügt abgerundete Ecken hinzu */
+    padding: 10px; /* Fügt etwas Platz um den Text hinzu, damit die abgerundeten Ecken sichtbar sind */
 }
