@@ -158,3 +158,37 @@ button:hover {
     top: 100px; /* Positioniert das Menü direkt unter der Navigationsleiste */
     left: 20px; /* Positioniert das Menü am linken Rand des Bildschirms */
 }
+
+footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    background-image: url('images/beige_marmor.jpeg');
+    background-repeat: repeat;
+    color: #fff;
+    height: 1vh;
+    border-top: 1px solid white; /* Fügt einen weißen Rand hinzu */
+    background-repeat: repeat;
+    color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid white; /* Fügt einen weißen Rand hinzu */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
