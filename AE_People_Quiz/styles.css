@@ -9,27 +9,21 @@ body {
     padding: 0;
     height: 100vh; /* Set the height to 100% of the viewport height */
     width: 100vw; /* Set the width to 100% of the viewport width */
+    flex-direction: column;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-#text_input{
-
-    width: 50%; /* Set the width of the search box */
-    padding: 10px; /* Add some padding inside the search box */
-    font-size: 16px; /* Set the font size */
-    border: 1px solid #ddd; /* Add a border */
-    border-radius: 20px; /* Make the corners rounded */
-
-}
-
 header {
-    background-color: #f1dcc9;
+    background-image: url('images/beige_marmor.jpeg');
+    background-repeat: repeat;
     color: #fff;
     padding: 10px 0;
+    border-bottom: 1px solid white; /* Fügt einen weißen Rand hinzu */
+    position: relative; /* Erlaubt es, das Logo relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
 }
 
 nav{
-    height: 50px;
+    height: 50px; 
 }
 
 nav ul {
@@ -42,6 +36,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     height: 100%;
+    
 
 }
 
@@ -60,9 +55,34 @@ nav ul li a {
 nav ul li a:hover {
     color: #6d2d2d; /* Farbe ändern bei Hover */
 }
+
+
+
+#image-container{
+     flex-wrap: wrap; /* Erlaubt den Bildern, in die nächste Zeile zu rücken, wenn der Platz nicht ausreicht */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+img{
+    
+    max-width: 50vw;  /* Set the maximum width to 80% of the viewport width */
+    max-height: 50vh; /* Set the maximum height to 80% of the viewport height */
+    width: auto;      /* This will maintain the aspect ratio of the image */
+    height: auto;     /* This will maintain the aspect ratio of the image */
+    /* This will ensure that the entire image is visible */
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
 .logo {
-    float: left; /* Damit das Logo links steht */
-    margin-right: 20px; /* Platz zwischen Logo und Menüelementen */
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-right: 20px; /* Platz zwischen Logo und Menüelementen */
+
 }
 
 .logo img {
@@ -73,23 +93,20 @@ nav ul li a:hover {
 }
 
 
-#image-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 20vw;  /* Set the maximum width to 80% of the viewport width */
-    max-height: 20vh; /* Set the maximum height to 80% of the viewport height */
-    width: auto;      /* This will maintain the aspect ratio of the image */
-    height: auto;     /* This will maintain the aspect ratio of the image */
-    object-fit: contain; /* This will ensure that the entire image is visible */
+#text_input{
+
+    width: 50%; /* Set the width of the search box */
+    padding: 10px; /* Add some padding inside the search box */
+    font-size: 16px; /* Set the font size */
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 20px; /* Make the corners rounded */
+
 }
-
-
 
 #search-container {
     display: flex;
     justify-content: center;
-    margin-top: 2vh; /* Adjust this value as needed */
+    margin-bottom: 1vh
 }
 
 #highscore-container {
@@ -105,6 +122,7 @@ nav ul li a:hover {
     font-size: 1.5em; /* Larger text */
     width: 50vw; /* Set the width to 50% of the viewport width */
     margin: 0 auto; /* This will center the highscore container */
+    margin-top: 1vh; /* Some space between the highscore and the image */
 }
 
 #button-container {
@@ -116,4 +134,18 @@ nav ul li a:hover {
 button {
     border-radius: 15px; /* Fügt abgerundete Ecken hinzu */
     padding: 10px; /* Fügt etwas Platz um den Text hinzu, damit die abgerundeten Ecken sichtbar sind */
+    margin-right: 1vb;
+}
+
+button:hover {
+    background-color: beige; /* Ändert die Hintergrundfarbe beim Überfahren mit der Maus */
+}
+
+#category-select {
+    width: 120px; /* Setzen Sie die Breite auf die gewünschte Breite des Buttons */
+    height: 25px;
+    border-radius: 10px; /* Fügt abgerundete Ecken hinzu */
+    position: absolute; /* Erlaubt es, das Menü relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
+    top: 100px; /* Positioniert das Menü direkt unter der Navigationsleiste */
+    left: 20px; /* Positioniert das Menü am linken Rand des Bildschirms */
 }
