@@ -16,6 +16,7 @@ const youtubeLink = document.getElementById('youtubeVideos');
 const audibleLink = document.getElementById('audibleHoerbuecher');
 
 var solutionButton = document.getElementById('solutionButton');
+var skiptButton = document.getElementById('skiptButton');
 var wikipediaButton = document.getElementById('wikipediaButton');
 var amazonButton = document.getElementById('amazonButton');
 var audibleButton = document.getElementById('audibleButton');
@@ -54,6 +55,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         showSolution();
 
+    });
+
+    skiptButton.addEventListener('click', function() {
+        markImageAsFinished();
+        showRandomImage();
     });
 
     wikipediaButton.addEventListener('click', function() {
