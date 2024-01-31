@@ -63,6 +63,11 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('images/baroque_frame.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
     }
 
 img{
@@ -74,6 +79,10 @@ img{
     /* This will ensure that the entire image is visible */
     margin-top: 10vh;
     margin-bottom: 10vh;
+    background-image: url('images/baroque_frame.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .logo {
