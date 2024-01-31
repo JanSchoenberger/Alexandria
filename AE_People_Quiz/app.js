@@ -183,7 +183,7 @@ function showRandomImage() {
 
     //updateAmazonLink(currentImageName);
     updateYoutubeLink    
-
+    // Testpublishing für Ionos !
     }
 
 function checkDone(remainingImages) {
