@@ -15,6 +15,7 @@ const amazonLink = document.getElementById('amazonBuecherKaufen');
 const youtubeLink = document.getElementById('youtubeVideos');
 const audibleLink = document.getElementById('audibleHoerbuecher');
 
+
 var solutionButton = document.getElementById('solutionButton');
 var skiptButton = document.getElementById('skiptButton');
 var wikipediaButton = document.getElementById('wikipediaButton');
@@ -22,14 +23,35 @@ var amazonButton = document.getElementById('amazonButton');
 var audibleButton = document.getElementById('audibleButton');
 var youtubeButton = document.getElementById('youtubeButton');
 
+
+
+
 // Bei Laden der Webseite:
 document.addEventListener('DOMContentLoaded', async function () {
     
     const selectedCategory = localStorage.getItem('selectedCategory');
-
+    
     if (selectedCategory) {
         categorySelect.value = selectedCategory;
     }
+
+    fetch('http://localhost:3000/data')
+    .then(response => {
+        if (!response.ok) {
+            return response.text().then(error => {
+                throw new Error(error);
+            });
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Hier können Sie die Daten verwenden.
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
 
     await readJSON(categorySelect.value);
     remainingImages = Object.keys(imageDictionary);
