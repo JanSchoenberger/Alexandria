@@ -22,15 +22,6 @@ var amazonButton = document.getElementById('amazonButton');
 var audibleButton = document.getElementById('audibleButton');
 var youtubeButton = document.getElementById('youtubeButton');
 
-
-// Auswahl der Kategorie:
-categorySelect.addEventListener('change', async function() {
-    localStorage.setItem('selectedCategory', this.value);
-    await readJSON(this.value);
-    remainingImages = Object.keys(imageDictionary);
-    showRandomImage();
-});
-
 // Bei Laden der Webseite:
 document.addEventListener('DOMContentLoaded', async function () {
     
@@ -57,12 +48,13 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     });
 
-    skiptButton.addEventListener('click', function() {
+    /*skiptButton.addEventListener('click', function() {
         markImageAsFinished();
         showRandomImage();
-    });
+    });*/
 
     wikipediaButton.addEventListener('click', function() {
+        
         searchWikipedia();
     });
 
@@ -79,6 +71,15 @@ document.addEventListener('DOMContentLoaded', async function () {
     });
 
 });
+
+// Auswahl der Kategorie:
+categorySelect.addEventListener('change', async function() {
+    localStorage.setItem('selectedCategory', this.value);
+    await readJSON(this.value);
+    remainingImages = Object.keys(imageDictionary);
+    showRandomImage();
+});
+
 
 // Shotcut Fokus auf das Eingabefeld:
 document.addEventListener('keydown', function(event) {
