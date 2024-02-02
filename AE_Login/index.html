@@ -4,20 +4,21 @@
 <html>
 <head>
     <title>User Registration</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
     <header>
 
         <div class="logo">
-            <a href="startseite.html">
-                <img src="images/favicon.png" alt="Logo">
+            <a href="../index.html">
+                <img src="../AE_People_Quiz/images/favicon.png" alt="Logo">
             </a>
         </div>
 
         <nav>
             <ul>
-                <li><a href="#start">Startseite</a></li>
+                <li><a href="../index.html">Startseite</a></li>
                 <li><a href="startseite.html">Quiz</a></li>
                 <li><a href="../AE Speed Typing/index.html">Typing</a></li>
                 <li><a href="../Login/index.html">Login</a></li>
@@ -26,10 +27,12 @@
     </header>
 
 
-
-    <h1>User Registration</h1>
+    <main>
+        
+        <div class="login-container">
+        <h1>User Registration</h1>
     
-    <form>
+        <form>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
         
@@ -41,6 +44,14 @@
         
         <input type="submit" value="Register" onclick="registerUser()">
     </form>
+    </div>
+
+</main>
+
+    <footer>
+
+
+    </footer>
 
 </body>
 </html>
