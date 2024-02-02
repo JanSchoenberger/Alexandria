@@ -1,11 +1,16 @@
-let filePath = "random"
 let imageDictionary = {};
+let categorySelect = document.getElementById('category-select');
 
 document.addEventListener('DOMContentLoaded', async function() {
+    
+    
+    const selectedCategory = localStorage.getItem('selectedCategory');
+    
+    if (selectedCategory) {
+        categorySelect.value = selectedCategory;
+    }
 
-    await readJSON(filePath);
-    console.log(imageDictionary);
-    console.log('Mach was');
+    await readJSON(categorySelect.value);
 
     const gallery = document.querySelector('.gallery');
     // Loop through the people
@@ -19,18 +24,29 @@ document.addEventListener('DOMContentLoaded', async function() {
     img.src = '../AE_People_Quiz/images/' + imageDictionary[name]; // Adjust the path if necessary
     img.alt = name;
 
+    //var p = document.createElement('p');
+    //p.textContent = name;
+      
       // Append the img element to the personDiv
     personDiv.appendChild(img);
-
+    //personDiv.appendChild(p);
       // Append the personDiv to the gallery
     gallery.appendChild(personDiv);
     }
-    console.log('Mach was');
+});
+
+// Auswahl der Kategorie:
+categorySelect.addEventListener('change', async function() {
+  localStorage.setItem('selectedCategory', this.value);
+  await readJSON(this.value);
+  remainingImages = Object.keys(imageDictionary);
+  location.reload();
 });
 
 
 async function readJSON(filePath) {
-    if (filePath === "random") {
+    
+  if (filePath === "random") {
         const response = await fetch('../AE_People_Quiz/image_dictionary.json');
         const data = await response.json();
         imageDictionary = data;
@@ -44,7 +60,7 @@ async function readJSON(filePath) {
     
     
     else {
-        const response = await fetch(`./kategories/${filePath}.json`);
+        const response = await fetch(`../AE_People_Quiz/kategories/${filePath}.json`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
