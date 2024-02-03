@@ -29,21 +29,6 @@ main{
     flex-grow:1;
 
 }
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    display: flex;
-    padding: 0 1vw; /* 0 top and bottom padding, 1vw left and right padding */
-  
-  }
-  
-  .person {
-    margin-right: 1vw;
-  }
-
 
 nav{
     height: 4vh; 
@@ -78,38 +63,6 @@ nav ul li a {
 nav ul li a:hover {
     color: #6d2d2d; /* Farbe ändern bei Hover */
 }
-
-
-
-#image-container{
-    flex-wrap: wrap; /* Erlaubt den Bildern, in die nächste Zeile zu rücken, wenn der Platz nicht ausreicht */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-img{  
-    /* Set the maximum height to 80% of the viewport height */
-   width: auto;      /* This will maintain the aspect ratio of the image */
-   height: auto;     /* This will maintain the aspect ratio of the image */
-   /* This will ensure that the entire image is visible */
-   max-width: 45vw;  /* Set the maximum width to 80% of the viewport width */
-    max-height: 45vh;
-   margin-top: 10vh;
-   margin-bottom: 10vh;
-   margin-left: 4vw;
-   margin-right: 4vw;
-
-}
-
-.person {
-    
-    background-image: url('../AE_People_Quiz/images/baroque_frame.png');
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
 
 .logo {
 
@@ -172,6 +125,17 @@ button:hover {
     top: 100px; /* Positioniert das Menü direkt unter der Navigationsleiste */
     left: 20px; /* Positioniert das Menü am linken Rand des Bildschirms */
 }
+
+.header-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../AE_People_Quiz/images/beige_marmor.png');
+    background-repeat: repeat;
+    border-radius: 10px;
+}
+
 
 footer {
     display: flex;
