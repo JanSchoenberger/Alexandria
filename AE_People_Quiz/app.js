@@ -94,22 +94,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 });
 
-// Express Route
-app.get('/person/:name', function(req, res) {
-    var personName = req.params.name;
-    var person = people[personName];
-
-    // Überprüfen Sie, ob die Person existiert
-    if (person) {
-        // Wenn die Person existiert, rendern Sie die Seite mit den Personendaten
-        res.render('person', person);
-    } else {
-        // Wenn die Person nicht existiert, senden Sie einen 404-Fehler
-        res.status(404).send('Person not found');
-    }
-});
-
-
 // Auswahl der Kategorie:
 categorySelect.addEventListener('change', async function() {
     localStorage.setItem('selectedCategory', this.value);
