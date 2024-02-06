@@ -1,6 +1,14 @@
 {   
     "William Shakespeare" : "William_Shakespeare.png",
     "Leo Tolstoy" : "Leo_Tolstoy.png",
-    "Fjodor Dostojevskij" : "Fjodor_Dostojewski.png"
-
+    "Fjodor Dostojevskij" : "Fjodor_Dostojewski.png",
+    "Astrid Lindgren" : "Astrid_Lindgren.png",
+    "J.K. Rowling" : "J.K._Rowling.png",
+    "J.R.R. Tolkien" : "J.R.R._Tolkien.png",
+    "Stephen King" : "Stephen_King.png",
+    "Agatha Christie" : "Agatha_Christie.png", 
+    "George Orwell" : "George_Orwell.png",
+    "Ernest Hemingway" : "Ernest_Hemingway.png",
+    "Jane Austen" : "Jane_Austen.png",
+    "Lewis Carroll" : "Lewis_Carroll.png"
 }
