@@ -24,12 +24,15 @@ document.addEventListener('DOMContentLoaded', async function() {
     img.src = '../AE_People_Quiz/images/' + imageDictionary[name]; // Adjust the path if necessary
     img.alt = name;
 
-    //var p = document.createElement('p');
-    //p.textContent = name;
+    var p = document.createElement('p');
+    p.textContent = name;
       
+
+      // Textinput als Teil der Bilder ?
+
       // Append the img element to the personDiv
     personDiv.appendChild(img);
-    //personDiv.appendChild(p);
+    personDiv.appendChild(p);
       // Append the personDiv to the gallery
     gallery.appendChild(personDiv);
     }
