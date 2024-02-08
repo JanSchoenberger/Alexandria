@@ -3,9 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alexandria Favoriten</title>
+    <link rel="icon" href="../AE_People_Quiz/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="../AE_People_Quiz/images/favicon.png" alt="Logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="/index.html">Startseite</a></li>
+                <li><a href="../AE_People_Quiz/index.html">Quiz</a></li>
+                <li><a href="../AE_People_Dictionary/index.html">Dictionary</a></li>
+                <li><a href="../AE_Favoriten/index.html">Favoriten</a></li>
+                <li><a href="../AE_Speed_Typing/index.html">Quotes</a></li>
+                <li><a href="../AE_Login/index.html">Login</a></li>
+
+            </ul>
+        </nav>
+    </header>
     
-</body>
+    <main>
+        
+        <select id="category-select">
+            <option value="random">Alle</option>
+            <option value="baseball">Baseball</option>
+            <option value="basketball">Basketball</option>
+            <option value="boxing">Boxen</option>
+            <option value="golf">Golf</option>
+            <option value="cricket">Cricket</option>
+            <option value="fashiondesigner">Modedesign</option>
+            <option value="cologne">Köln</option>
+            <option value="musician">Musik</option>
+            <option value="painter">Malerei</option>
+            <option value="writer">Schriftstellertum</option>
+            <option value="actor">Schauspielerei</option>
+            <option value="cycling">Radsport</option>
+            <option value="politician">Politik</option>
+            <option value="physicist">Physik</option>
+            <option value="philosopher">Philosophie</option>
+            <option value="entrepreneur">Unternehmertum</option> 
+            <option value="model">Modeling</option> 
+            <option value="football">Fußball</option> 
+            <option value="tennis">Tennis</option>
+            <option value="swimming">Schwimmen</option>
+            <option value="rugby">Rugby</option>
+            <option value="hockey">Hockey</option>
+            <option value="volleyball">Volleyball</option>
+            <option value="handball">Handball</option>
+            <option value="athletics">Leichtathletik</option>
+            <option value="motorsport">Motorsport</option>
+            <option value="skating">Skaten</option>
+            <option value="skiing">Ski</option>
+            <option value="freiburg">Freiburg</option>
+            
+            
+        </select>
+        
+        <div class="gallery" id="image-container"></div>
+
+
+    </main>
+    
+    <footer>
+    </footer>
+
+    <script src="app.js"></script>
+    </body>
+    
 </html>
