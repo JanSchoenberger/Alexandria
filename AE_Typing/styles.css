@@ -1,0 +1,232 @@
+body {
+    background-image: url("/AE_People_Quiz/images/Library_of_Alexandria_Background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    display:flex;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100vh; /* Set the height to 100% of the viewport height */
+    width: 100vw; /* Set the width to 100% of the viewport width */
+    flex-direction: column;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+header {
+    background-image: url('/AE_People_Quiz/images/beige_marmor.png');
+    background-repeat: repeat;
+    color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid white; /* Fügt einen weißen Rand hinzu */
+    position: relative; /* Erlaubt es, das Logo relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
+}
+
+main{
+
+    flex-grow:1;
+
+}
+.header-container {
+    background-image: url('/AE_People_Quiz/images/beige_marmor.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px; /* Adjust as needed */
+    text-align: center;
+    border-radius: 10px; /* Adjust as needed */
+  }
+  
+  h1 {
+    font-family: 'Brush Script MT', cursive; /* This is an example of a cursive font */
+    color: #ffe7c5;
+    font-size: 3em; /* Adjust as needed */
+    text-shadow: 2px 2px 0px #000000; /* Adjust as needed */
+    
+  }
+nav{
+    height: 4vh; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #6d2d2d; /* Farbe ändern bei Hover */
+}
+
+
+
+#image-container{
+     flex-wrap: wrap; /* Erlaubt den Bildern, in die nächste Zeile zu rücken, wenn der Platz nicht ausreicht */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/AE_People_Quiz/images/baroque_frame.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    }
+
+img{
+    
+    max-width: 50vw;  /* Set the maximum width to 80% of the viewport width */
+    max-height: 50vh; /* Set the maximum height to 80% of the viewport height */
+    width: auto;      /* This will maintain the aspect ratio of the image */
+    height: auto;     /* This will maintain the aspect ratio of the image */
+    /* This will ensure that the entire image is visible */
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-image: url('/AE_People_Quiz/images/baroque_frame.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4%;
+}
+
+.logo {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-right: 20px; /* Platz zwischen Logo und Menüelementen */
+
+}
+
+.logo img {
+    max-width: 100%; /* Das Logo wird sich je nach Bildschirmgröße anpassen */
+    margin-top: 0px; /* Platz zwischen Logo und Menüelementen */
+    height: auto; /* Behält das Seitenverhältnis des Logos bei */
+    width: 50px; /* Setze die Breite des Logos für kleinere Bildschirme */
+    margin-right: 20px; /* Platz zwischen Logo und Menüelementen */
+    background-image: none;
+}
+
+
+#text_input{
+
+    width: 25vw;; /* Set the width of the search box */
+    padding: 10px; /* Add some padding inside the search box */
+    font-size: 16px; /* Set the font size */
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 20px; /* Make the corners rounded */
+
+}
+
+#search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh
+}
+
+#highscore-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2; /* Light grey background */
+    color: #333; /* Dark grey text */
+    padding: 20px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* A subtle shadow */
+    margin-bottom: 2vh; /* Some space between the highscore and the image */
+    font-size: 1.5em; /* Larger text */
+    width: 23.5vw; /* Set the width to 50% of the viewport width */
+    max-width: 50vw;
+    margin: 0 auto; /* This will center the highscore container */
+    margin-top: 1vh; /* Some space between the highscore and the image */
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Erlaubt den Buttons, in die nächste Zeile zu rücken, wenn der Platz nicht ausreicht */
+}
+
+button {
+    border-radius: 15px; /* Fügt abgerundete Ecken hinzu */
+    padding: 10px; /* Fügt etwas Platz um den Text hinzu, damit die abgerundeten Ecken sichtbar sind */
+    margin-right: 1vb;
+}
+
+button:hover {
+    background-color: beige; /* Ändert die Hintergrundfarbe beim Überfahren mit der Maus */
+}
+
+#category-select {
+    width: 120px; /* Setzen Sie die Breite auf die gewünschte Breite des Buttons */
+    height: 25px;
+    border-radius: 10px; /* Fügt abgerundete Ecken hinzu */
+    position: absolute; /* Erlaubt es, das Menü relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
+    top: 100px; /* Positioniert das Menü direkt unter der Navigationsleiste */
+    left: 20px; /* Positioniert das Menü am linken Rand des Bildschirms */
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    background-image: url('/AE_People_Quiz/images/beige_marmor.png');
+    background-repeat: repeat;
+    color: #fff;
+    height: 1vh;
+    border-top: 1px solid white; /* Fügt einen weißen Rand hinzu */
+    background-repeat: repeat;
+    color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid white; /* Fügt einen weißen Rand hinzu */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#wordDisplay{
+
+    background-color: white;
+
+}
