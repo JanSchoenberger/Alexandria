@@ -6,13 +6,16 @@ document.addEventListener('DOMContentLoaded', async function() {
     
     const selectedCategory = localStorage.getItem('selectedCategory');
     
+    const gallery = document.querySelector('.gallery');
+
+
     if (selectedCategory) {
         categorySelect.value = selectedCategory;
     }
 
     await readJSON(categorySelect.value);
 
-    const gallery = document.querySelector('.gallery');
+
     // Loop through the people
     for (let name in imageDictionary) {
     // Create a new div element for the person
