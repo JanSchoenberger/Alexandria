@@ -5,6 +5,7 @@ let remainingImages = [];
 let score = 0;
 let imageDictionary = {};
 
+
 const imageContainer = document.getElementById('image-container');
 const nameForm = document.getElementById('name-form');
 const personNameInput = document.getElementById('text_input');
@@ -14,7 +15,7 @@ const categorySelect = document.getElementById('category-select');
 const amazonLink = document.getElementById('amazonBuecherKaufen');
 const youtubeLink = document.getElementById('youtubeVideos');
 const audibleLink = document.getElementById('audibleHoerbuecher');
-
+const favoritenButton = document.getElementById('favoritenButton');
 
 var solutionButton = document.getElementById('solutionButton');
 var skiptButton = document.getElementById('skiptButton');
@@ -197,11 +198,22 @@ function showRandomImage() {
 
     let randomIndex = Math.floor(Math.random() * remainingImages.length);
     let randomKey = remainingImages[randomIndex];
-
+    
     // Remove the selected name from remainingImages
     remainingImages.splice(randomIndex, 1);
-
+    console.log(randomKey);
     const randomImageFileName = "images/" + imageDictionary[randomKey] ;
+
+    let favoritenPerson = {[randomKey]: randomImageFileName};
+    
+    let button = document.getElementById('favoritenButton');
+
+        button.addEventListener('click', function() {
+            console.log(favoritenPerson);
+            addToFavorites(favoritenPerson);
+            //console.log("worked");
+        });
+
 
     const imageElement = document.createElement('img');
     imageElement.src = randomImageFileName; // Set the source of the imageElement
@@ -280,5 +292,20 @@ function searchWikipedia() {
         window.open(url, '_blank');
     }
 
-
-
+function addToFavorites(person) {
+        // Get the current list of favorites from Local Storage
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        console.log(person)
+        console.log(favorites)
+        // Check if the person is already in the favorites list
+        
+        if (!favorites.some(favorite => JSON.stringify(favorite) === JSON.stringify(person))) {
+            // Add the new person to the favorites list
+            favorites.push(person);
+    
+            // Save the updated favorites list back to Local Storage
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        } else {
+            console.log(person.name + ' is already in the favorites list');
+        }
+    }
