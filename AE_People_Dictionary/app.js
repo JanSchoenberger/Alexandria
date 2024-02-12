@@ -38,7 +38,24 @@ document.addEventListener('DOMContentLoaded', async function() {
     personDiv.appendChild(p);
       // Append the personDiv to the gallery
     gallery.appendChild(personDiv);
+
     }
+
+    document.querySelectorAll('img').forEach(function(img) {
+      img.addEventListener('click', function(event) {
+          // Angenommen, der Name der Person ist im alt-Attribut des Bildes gespeichert
+          let person = event.target.alt;
+  
+          // Erstellen Sie ein neues div-Element für die Personenseite
+          let personPage = document.createElement('div');
+          personPage.id = 'person-page-' + person.replace(/ /g, '_');
+          personPage.textContent = 'Seite für ' + person;
+          
+          // Fügen Sie die Personenseite zum body-Element hinzu
+          document.body.appendChild(personPage);
+      });
+  });
+
 });
 
 // Auswahl der Kategorie:
@@ -48,6 +65,14 @@ categorySelect.addEventListener('change', async function() {
   remainingImages = Object.keys(imageDictionary);
   location.reload();
 });
+
+document.querySelector('img').addEventListener('click', function(event) {
+  let person = event.target.alt; // Angenommen, der Name der Person ist im alt-Attribut des Bildes gespeichert
+  document.querySelector('#person-name').textContent = person;
+  document.querySelector('#person-page').style.display = 'block';
+  console.log("funktioniert!");
+});
+
 
 
 async function readJSON(filePath) {
