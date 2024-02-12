@@ -18,7 +18,7 @@ const audibleLink = document.getElementById('audibleHoerbuecher');
 const favoritenButton = document.getElementById('favoritenButton');
 
 var solutionButton = document.getElementById('solutionButton');
-var skiptButton = document.getElementById('skiptButton');
+var skipButton = document.getElementById('skipButton');
 var wikipediaButton = document.getElementById('wikipediaButton');
 var amazonButton = document.getElementById('amazonButton');
 var audibleButton = document.getElementById('audibleButton');
@@ -93,6 +93,12 @@ document.addEventListener('DOMContentLoaded', async function () {
         updateYoutubeLink();
     });
 
+    skipButton.addEventListener('click', function() {
+        // Show the next random image
+        showRandomImage();
+    });
+    
+
 });
 
 // Auswahl der Kategorie:
@@ -102,6 +108,7 @@ categorySelect.addEventListener('change', async function() {
     remainingImages = Object.keys(imageDictionary);
     showRandomImage();
 });
+
 
 
 // Shotcut Fokus auf das Eingabefeld:
