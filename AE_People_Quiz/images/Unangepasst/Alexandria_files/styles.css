@@ -177,14 +177,12 @@ button:hover {
 }
 
 #category-select {
-    width: 10vw; /* Setzen Sie die Breite auf die gewünschte Breite des Buttons */
-    height: 5vh;
+    width: 120px; /* Setzen Sie die Breite auf die gewünschte Breite des Buttons */
+    height: 25px;
     border-radius: 10px; /* Fügt abgerundete Ecken hinzu */
     position: absolute; /* Erlaubt es, das Menü relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
     top: 100px; /* Positioniert das Menü direkt unter der Navigationsleiste */
     left: 20px; /* Positioniert das Menü am linken Rand des Bildschirms */
-    font-family: Parisienne, cursive; /* This is an example of a cursive font */
-    font-size: 3vh;
 }
 
 footer {

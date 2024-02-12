@@ -47,7 +47,7 @@ main{
     text-shadow: 2px 2px 0px #000000; /* Adjust as needed */
     
   }
-nav{
+  nav{
     height: 4vh; 
 }
 
@@ -73,12 +73,22 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
+    
     font-weight: bold;
-    font-size: 16px;
+    font-size: 3vh;
+    font-family: Parisienne, cursive; /* This is an example of a cursive font */
+
+    text-shadow:  1px  1px 1px black,
+                1px -1px 1px black,
+                -1px  1px 1px black,
+                -1px -1px 1px black;
+
+    padding-bottom: 1vh;
 }
 
 nav ul li a:hover {
     color: #6d2d2d; /* Farbe ändern bei Hover */
+    text-decoration: underline;
 }
 
 

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://127.0.0.1:5500/AE_People_Quiz/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="/images/icon.png">
+    <title>Alexandria</title>
+    
+    
+    
+    
+    <script async="" src="./Alexandria_files/f.txt" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./Alexandria_files/styles.css"><link rel="icon" type="image/x-icon" href="./Alexandria_files/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="http://127.0.0.1:5500/AE_People_Quiz/images/iphoneicon.png"><link rel="stylesheet" href="./Alexandria_files/css"></head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <a href="http://127.0.0.1:5500/AE_People_Quiz/index.html">
+                <img src="./Alexandria_files/favicon.png" alt="Logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html">Startseite</a></li>
+                <li><a href="http://127.0.0.1:5500/AE_People_Quiz/index.html">Quiz</a></li>
+                <li><a href="http://127.0.0.1:5500/AE_People_Dictionary/index.html">Dictionary</a></li>
+                <li><a href="http://127.0.0.1:5500/AE_Favoriten/index.html">Favoriten</a></li>
+                <li><a href="http://127.0.0.1:5500/AE_Quotes/index.html">Quotes</a></li>
+                <li><a href="http://127.0.0.1:5500/AE_Typing/index.html">Typing</a></li>
+                <li><a href="http://127.0.0.1:5500/AE_Login/index.html">Login</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div id="scoreboard"></div>
+    
+        <div id="highscore-container">
+            Score: <span id="score">6</span>
+        </div>
+    
+    
+        <div id="image-container"><img src="./Alexandria_files/Edgar_Degas.png"></div>
+
+
+        <div id="search-container">
+        <input type="text" id="text_input" placeholder="Hier den Namen eingeben" autofocus="">
+        </div>
+
+        <div id="button-container">
+
+        <button id="solutionButton">Show Solution</button>
+
+        <button id="skipButton">Skip</button>
+
+        <button id="wikipediaButton">Search Wikipedia</button>
+
+        <a id="amazonButton" target="_blank" href="https://www.amazon.de/gp/search?ie=UTF8&amp;tag=alexandriaedu-21&amp;linkCode=ur2&amp;linkId=c785fd90e5b1a810d923555ed9945769&amp;camp=1638&amp;creative=6742&amp;index=books&amp;keywords=">
+            <button>Bücher zu den Person</button>
+        </a>
+
+        <a id="audibleButton" target="_blank" href="https://www.amazon.de/gp/search?ie=UTF8&amp;tag=alexandriaedu-21&amp;linkCode=ur2&amp;linkId=072e2026fa90f9d3ba63312352418bed&amp;camp=1638&amp;creative=6742&amp;index=audible&amp;keywords=">
+            <button>Hörbücher zu den Personen</button>
+        </a>
+
+        <a id="youtubeButton" target="_blank" href="https://www.youtube.com/results?search_query=">
+            <button>Videos zu der Person</button>
+        </a>
+
+        <button id="favoritenButton">Favoriten Button</button>
+
+        </div>
+    
+    
+    <select id="category-select">
+        <option value="random">Zufällig</option>
+        <option value="fashiondesigner">Modedesign</option>
+        <option value="musician">Musik</option>
+        <option value="painter">Malerei</option>
+        <option value="writer">Schriftstellertum</option>
+        <option value="actor">Schauspielerei</option>
+        <option value="politician">Politik</option>
+        <option value="physicist">Physik</option>
+        <option value="philosopher">Philosophie</option>
+        <option value="entrepreneur">Unternehmertum</option> 
+        <option value="model">Modeling</option> 
+        <option value="football">Fußball</option> 
+        <option value="basketball">Basketball</option>
+        <option value="tennis">Tennis</option>
+        <option value="golf">Golf</option>
+        <option value="swimming">Schwimmen</option>
+        <option value="boxing">Boxen</option>
+        <option value="baseball">Baseball</option>
+        <option value="cricket">Cricket</option>
+        <option value="rugby">Rugby</option>
+        <option value="hockey">Hockey</option>
+        <option value="volleyball">Volleyball</option>
+        <option value="handball">Handball</option>
+        <option value="athletics">Leichtathletik</option>
+        <option value="cycling">Radsport</option>
+        <option value="motorsport">Motorsport</option>
+        <option value="skating">Skaten</option>
+        <option value="skiing">Ski</option>
+        <option value="freiburg">Freiburg</option>
+        <option value="cologne">Köln</option>
+        
+        
+    </select>
+
+    </main>
+
+    <footer>
+
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/AE_People_Quiz/index.html#impressum">Impressum</a></li>
+                <li><a href="http://127.0.0.1:5500/AE_People_Quiz/index.html#kontakt">Kontakt</a></li>
+                <li><a href="http://127.0.0.1:5500/AE_People_Quiz/index.html#ueberuns">Über uns</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+    <script src="./Alexandria_files/canvas-confetti@1.3.2"></script>
+    <script src="./Alexandria_files/lodash.min.js.download"></script>
+    <script type="module" src="./Alexandria_files/app.js.download"></script>
+
+    
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
