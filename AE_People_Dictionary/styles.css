@@ -58,6 +58,8 @@ nav ul {
     justify-content: center;
     align-items: center;
     height: 100%;
+    
+
 }
 
 nav ul li {
@@ -68,14 +70,23 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
+    
     font-weight: bold;
-    font-size: 16px;
+    font-size: 3vh;
+    font-family: Parisienne, cursive; /* This is an example of a cursive font */
+
+    text-shadow:  1px  1px 1px black,
+                1px -1px 1px black,
+                -1px  1px 1px black,
+                -1px -1px 1px black;
+
+    padding-bottom: 1vh;
 }
 
 nav ul li a:hover {
     color: #6d2d2d; /* Farbe ändern bei Hover */
+    text-decoration: underline;
 }
-
 
 
 #image-container{
