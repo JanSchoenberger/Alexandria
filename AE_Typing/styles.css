@@ -91,34 +91,29 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+#wordDisplay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3vh;
+    background-color: white;
+    padding: 20px;
+    width: 75%;
+    height: auto;
+    text-align: center;
+    font-size: 4vh;
+    font-family: Parisienne, cursive;
+}
 
-
-#image-container{
-     flex-wrap: wrap; /* Erlaubt den Bildern, in die nächste Zeile zu rücken, wenn der Platz nicht ausreicht */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('/AE_People_Quiz/images/baroque_frame.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    }
-
-img{
-    
-    max-width: 50vw;  /* Set the maximum width to 80% of the viewport width */
-    max-height: 50vh; /* Set the maximum height to 80% of the viewport height */
-    width: auto;      /* This will maintain the aspect ratio of the image */
-    height: auto;     /* This will maintain the aspect ratio of the image */
-    /* This will ensure that the entire image is visible */
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    background-image: url('/AE_People_Quiz/images/baroque_frame.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 4%;
+#wordInput {
+    position: absolute;
+    top: calc(50% + 2em);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vh;
+    font-family: Parisienne, cursive;
+    border-radius: 2vh;
 }
 
 .logo {
@@ -235,8 +230,13 @@ footer nav ul li a {
     text-decoration: none;
 }
 
-#wordDisplay{
 
-    background-color: white;
+.word-row {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.word {
+    flex: 1 0 10%;
+    text-align: center;
 }
