@@ -29,7 +29,11 @@ document.getElementById('wordInput').addEventListener('input', function(event) {
     }
 });*/
 
-document.getElementById('wordInput').addEventListener('input', function(event) {
+document.getElementById('wordInput').addEventListener('keyup', function(event) {
+    if (event.key !== ' ') {
+        return;
+    }
+
     const inputWords = event.target.value.trim().split(' ');
     const displayWords = Array.from(document.getElementById('wordDisplay').children);
 
@@ -44,7 +48,7 @@ document.getElementById('wordInput').addEventListener('input', function(event) {
     }
 
     // If 10 words have been entered, remove them and display the next 10 words
-    if (inputWords.length >= 10 && event.data === ' ') {
+    if (inputWords.length >= 10) {
         event.target.value = '';
         displayIndex += 10;
         displayRandomWords(words);
