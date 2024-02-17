@@ -74,6 +74,10 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+
+
+
+
 .logo {
 
         position: absolute;
@@ -109,7 +113,25 @@ nav ul li a:hover {
     margin-bottom: 1vh
 }
 
-
+.quote-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    height: 30vh;
+    width: 30vw;
+    font-size: 3vh;
+    font-family: Parisienne, cursive; /* This is an example of a cursive font */
+    box-sizing: border-box;
+    text-align: center;
+}
 
 #button-container {
     display: flex;
