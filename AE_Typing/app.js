@@ -35,15 +35,18 @@ document.getElementById('wordInput').addEventListener('keyup', function(event) {
     }
 
     const inputWords = event.target.value.trim().split(' ');
-    const displayWords = Array.from(document.getElementById('wordDisplay').children);
+    const displayRows = Array.from(document.getElementById('wordDisplay').children);
 
     for (let i = 0; i < inputWords.length; i++) {
-        if (inputWords[i] === displayWords[i].innerText) {
-            // Make the word green
-            displayWords[i].style.color = 'green';
-        } else if (inputWords[i] !== displayWords[i].innerText) {
-            // Make the word red
-            displayWords[i].style.color = 'red';
+        const displayWords = Array.from(displayRows[i].children);
+        for (let j = 0; j < displayWords.length; j++) {
+            if (inputWords[i] === displayWords[j].innerText) {
+                // Make the word green
+                displayWords[j].style.color = 'green';
+            } else if (inputWords[i] !== displayWords[j].innerText) {
+                // Make the word red
+                displayWords[j].style.color = 'red';
+            }
         }
     }
 
@@ -65,6 +68,7 @@ async function fetchWords() {
         displayRandomWords(words);
     })
     .catch(error => console.error('Error:', error));
+    return words;
 }
 
 function limitWords(words, start, limit) {

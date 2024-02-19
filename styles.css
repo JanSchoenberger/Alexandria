@@ -1,5 +1,5 @@
 body {
-    background-image: url("/AE_People_Quiz/images/Library_of_Alexandria_Background.png");
+    background-image: url("AE_People_Quiz/images/Library_of_Alexandria_Background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    background-image: url('/AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('AE_People_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
     color: #fff;
     padding: 10px 0;
@@ -30,7 +30,7 @@ main{
 
 }
 .header-container {
-    background-image: url('/AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('AE_People_Quiz/images/beige_marmor.png');
     position: absolute;
     top: 50%;
     left: 50%;
@@ -101,7 +101,7 @@ img{
     /* This will ensure that the entire image is visible */
     margin-top: 10vh;
     margin-bottom: 10vh;
-    background-image: url('/AE_People_Quiz/images/baroque_frame.png');
+    background-image: url('AE_People_Quiz/images/baroque_frame.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -137,7 +137,7 @@ footer {
     background-color: #ffffff;
     padding: 10px;
     text-align: center;
-    background-image: url('/AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('AE_People_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
     color: #fff;
     height: 1vh;
