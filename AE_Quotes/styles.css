@@ -14,7 +14,6 @@ body {
     flex-direction: column;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
-
 header {
     background-image: url('../AE_People_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
@@ -24,13 +23,7 @@ header {
     position: relative; /* Erlaubt es, das Logo relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
 }
 
-main{
-
-    flex-grow:1;
-
-}
-
-nav{
+nav {
     height: 4vh; 
 }
 
@@ -41,15 +34,13 @@ nav ul {
     text-align: center;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
-    
-
 }
 
 nav ul li {
-    display: inline;
+    display: flex;
     margin-right: 20px;
 }
 
@@ -70,9 +61,25 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6d2d2d; /* Farbe ändern bei Hover */
+    color:silver; /* Farbe ändern bei Hover */
     text-decoration: underline;
 }
+
+nav ul .center-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav ul .login {
+    margin-left: auto;
+}
+
+nav ul .logo {
+    margin-right: auto;
+}
+
+
 
 
 

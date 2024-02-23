@@ -60,7 +60,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6d2d2d; /* Farbe ändern bei Hover */
+    color:silver; /* Farbe ändern bei Hover */
     text-decoration: underline;
 }
 
@@ -165,7 +165,7 @@ h2 {
 .button:hover {
     background-color: white; 
     color: black; 
-    border: 2px solid #4CAF50;
+    border: 2px solid white;
 }
 
 footer {

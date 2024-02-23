@@ -14,9 +14,8 @@ body {
     flex-direction: column;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
-
 header {
-    background-image: url('/AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('AE_People_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
     color: #fff;
     padding: 10px 0;
@@ -24,30 +23,7 @@ header {
     position: relative; /* Erlaubt es, das Logo relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
 }
 
-main{
-
-    flex-grow:1;
-
-}
-.header-container {
-    background-image: url('/AE_People_Quiz/images/beige_marmor.png');
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px; /* Adjust as needed */
-    text-align: center;
-    border-radius: 10px; /* Adjust as needed */
-  }
-  
-  h1 {
-    font-family: 'Brush Script MT', cursive; /* This is an example of a cursive font */
-    color: #ffe7c5;
-    font-size: 3em; /* Adjust as needed */
-    text-shadow: 2px 2px 0px #000000; /* Adjust as needed */
-    
-  }
-  nav{
+nav {
     height: 4vh; 
 }
 
@@ -58,15 +34,13 @@ nav ul {
     text-align: center;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
-    
-
 }
 
 nav ul li {
-    display: inline;
+    display: flex;
     margin-right: 20px;
 }
 
@@ -87,9 +61,25 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6d2d2d; /* Farbe ändern bei Hover */
+    color:silver; /* Farbe ändern bei Hover */
     text-decoration: underline;
 }
+
+nav ul .center-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav ul .login {
+    margin-left: auto;
+}
+
+nav ul .logo {
+    margin-right: auto;
+}
+
+
 
 #wordDisplay {
     position: absolute;

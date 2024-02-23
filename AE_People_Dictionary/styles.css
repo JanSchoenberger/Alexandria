@@ -84,7 +84,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6d2d2d; /* Farbe ändern bei Hover */
+    color: silver; /* Farbe ändern bei Hover */
     text-decoration: underline;
 }
 
