@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^Quiz$ /Alexandria/AE_People_Quiz/index.html [L]
