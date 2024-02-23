@@ -22,7 +22,7 @@ header {
     position: relative; /* Erlaubt es, das Logo relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
 }
 
-nav{
+nav {
     height: 4vh; 
 }
 
@@ -33,15 +33,13 @@ nav ul {
     text-align: center;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
-    
-
 }
 
 nav ul li {
-    display: inline;
+    display: flex;
     margin-right: 20px;
 }
 
@@ -66,6 +64,21 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+nav ul .center-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav ul .login {
+    margin-left: auto;
+}
+
+nav ul .logo {
+    margin-right: auto;
+}
+
+
 img{
     
     max-width: 50vw;  /* Set the maximum width to 80% of the viewport width */
@@ -84,10 +97,10 @@ img{
 
 .logo {
 
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-right: 20px; /* Platz zwischen Logo und Menüelementen */
+    position: absolute;
+    top: 0.2vh;
+    
+    
 
 }
 

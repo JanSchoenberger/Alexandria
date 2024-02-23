@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^Quiz$ /AE_People_Quiz/index.html [R=301,NC,L]
+RewriteRule ^/Quiz$ /AE_People_Quiz/index.html [R=301,NC,L]
