@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteRule ^$ ./index.html 
-RewriteRule ^quiz$ ./AE_People_Quiz/index.html 
+RewriteRule ^$ index.html 
+RewriteRule ^quiz$ AE_People_Quiz/index.html 
 RewriteRule ^dictionary$ ./AE_People_Dictionary/index.html 
 RewriteRule ^favoriten$ ./AE_Favoriten/index.html 
 RewriteRule ^quotes$ ./AE_Quotes/index.html 
