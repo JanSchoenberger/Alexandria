@@ -281,7 +281,7 @@ async function readJSON(filePath) {
     
         
         else {
-            const response = await fetch(`./AE_People_Quiz/kategories/${filePath}.json`);
+            const response = await fetch(`./AE_Quiz/kategories/${filePath}.json`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
