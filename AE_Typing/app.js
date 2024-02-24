@@ -61,7 +61,7 @@ document.getElementById('wordInput').addEventListener('keyup', function(event) {
 
 
 async function fetchWords() {
-    fetch('words.json')
+    fetch('./AE_Typing/words.json')
     .then(response => response.json())
     .then(data => {
         words = data.Wörter;

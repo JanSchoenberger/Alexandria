@@ -209,7 +209,7 @@ function showRandomImage() {
     // Remove the selected name from remainingImages
     remainingImages.splice(randomIndex, 1);
     console.log(randomKey);
-    const randomImageFileName = "images/" + imageDictionary[randomKey] ;
+    const randomImageFileName = "./AE_Quiz/images/" + imageDictionary[randomKey] ;
 
     let favoritenPerson = {[randomKey]: randomImageFileName};
     
@@ -268,7 +268,7 @@ function showSolution() {
 
 async function readJSON(filePath) {
         if (filePath === "random") {
-            const response = await fetch('image_dictionary.json');
+            const response = await fetch('./AE_Quiz/image_dictionary.json');
             const data = await response.json();
             imageDictionary = data;
 
@@ -281,7 +281,7 @@ async function readJSON(filePath) {
     
         
         else {
-            const response = await fetch(`./kategories/${filePath}.json`);
+            const response = await fetch(`./AE_People_Quiz/kategories/${filePath}.json`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }

@@ -1,11 +1,10 @@
 body {
-    background-image: url("../AE_People_Quiz/images/Library_of_Alexandria_Background.png");
+    background-image: url("images/Library_of_Alexandria_Background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    
     font-family: Arial, sans-serif;
-    display:flex;
     margin: 0;
     padding: 0;
     height: auto;
@@ -16,7 +15,7 @@ body {
 }
 
 header {
-    background-image: url('../AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('images/beige_marmor.png');
     background-repeat: repeat;
     color: #fff;
     padding: 10px 0;
@@ -64,71 +63,34 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6d2d2d; /* Farbe ändern bei Hover */
+    color: silver; /* Farbe ändern bei Hover */
     text-decoration: underline;
 }
 
-main{
-
-    flex-grow:1;
-
-}
-
-.person {
-    margin-right: 1vw;
-}
-
-
-
 
 #image-container{
-    flex-wrap: wrap; /* Erlaubt den Bildern, in die nächste Zeile zu rücken, wenn der Platz nicht ausreicht */
+     flex-wrap: wrap; /* Erlaubt den Bildern, in die nächste Zeile zu rücken, wenn der Platz nicht ausreicht */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-img{  
-    /* Set the maximum height to 80% of the viewport height */
-    width: auto;      /* This will maintain the aspect ratio of the image */
-    height: auto;     /* This will maintain the aspect ratio of the image */
-   /* This will ensure that the entire image is visible */
-    max-width: 45vw;  /* Set the maximum width to 80% of the viewport width */
-    max-height: 45vh;
-    
-    margin-left: 4vw;
-    margin-right: 4vw;
-
-}
-
-.person {
-    
-    background-image: url('../AE_People_Quiz/images/baroque_frame.png');
-    background-size: auto 100%;
+    background-image: url('images/baroque_frame.png');
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    text-align: center;
-    display: block;
-
-}
-
-.person p {
-
     
-    border: 2px solid white; /* Adjust as needed */
-    background-color: white;
-    height: 50%;
-    width: 50%;
-    max-width: 30vw; /* Adjust as needed */
-    max-height: 30vh;
-    border-radius: 10px; /* Adjust as needed */
-    padding: 10px; /* Adjust as needed */
-    display:block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Parisienne', cursive;
-    font-size: 2.5vh; /* oder größer, je nach Bedarf */
+    
+    }
+
+img{
+    
+    max-width: 50vw;  
+    max-height: 50vh; 
+    width: fixed;      
+    height: fixed;     
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    
+
 }
 
 .logo {
@@ -149,6 +111,65 @@ img{
     background-image: none;
 }
 
+
+#text_input{
+
+    width: 25vw;; /* Set the width of the search box */
+    padding: 10px; /* Add some padding inside the search box */
+    font-size: 16px; /* Set the font size */
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 20px; /* Make the corners rounded */
+    font-family: Parisienne, cursive ; /* This is an example of a cursive font */
+    font-size: 2.3vh;
+
+}
+
+#search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh;
+    position: relative;
+    
+}
+
+#highscore-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2; /* Light grey background */
+    color: #333; /* Dark grey text */
+    padding: 20px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* A subtle shadow */
+    margin-bottom: 2vh; /* Some space between the highscore and the image */
+    width: 23.5vw; /* Set the width to 50% of the viewport width */
+    max-width: 50vw;
+    margin: 0 auto; /* This will center the highscore container */
+    margin-top: 1vh; /* Some space between the highscore and the image */
+    font-family: Parisienne, cursive; /* This is an example of a cursive font */
+    font-size: 4vh;
+
+}
+
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Erlaubt den Buttons, in die nächste Zeile zu rücken, wenn der Platz nicht ausreicht */
+}
+
+button {
+    border-radius: 15px; /* Fügt abgerundete Ecken hinzu */
+    padding: 10px; /* Fügt etwas Platz um den Text hinzu, damit die abgerundeten Ecken sichtbar sind */
+    margin-right: 1vb;
+    font-family: Parisienne, cursive; /* This is an example of a cursive font */
+    font-size: 2vh;
+}
+
+button:hover {
+    background-color: beige; /* Ändert die Hintergrundfarbe beim Überfahren mit der Maus */
+}
+
 #category-select {
     width: 10vw; /* Setzen Sie die Breite auf die gewünschte Breite des Buttons */
     height: 5vh;
@@ -167,7 +188,7 @@ footer {
     background-color: #ffffff;
     padding: 10px;
     text-align: center;
-    background-image: url('../AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('images/beige_marmor.png');
     background-repeat: repeat;
     color: #fff;
     height: 1vh;
@@ -180,6 +201,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 
 footer nav ul {
     list-style-type: none;

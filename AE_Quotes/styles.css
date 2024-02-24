@@ -1,5 +1,5 @@
 body {
-    background-image: url("../AE_People_Quiz/images/Library_of_Alexandria_Background.png");
+    background-image: url("../AE_Quiz/images/Library_of_Alexandria_Background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,20 +14,13 @@ body {
     flex-direction: column;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
-
 header {
-    background-image: url('../AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('../AE_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
     color: #fff;
     padding: 10px 0;
     border-bottom: 1px solid white; /* Fügt einen weißen Rand hinzu */
     position: relative; /* Erlaubt es, das Logo relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
-}
-
-main{
-
-    flex-grow:1;
-
 }
 
 nav{
@@ -70,10 +63,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6d2d2d; /* Farbe ändern bei Hover */
+    color: silver; /* Farbe ändern bei Hover */
     text-decoration: underline;
 }
-
 
 
 
@@ -163,7 +155,7 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url('../AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('../AE_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
     border-radius: 10px;
 }
@@ -176,7 +168,7 @@ footer {
     background-color: #ffffff;
     padding: 10px;
     text-align: center;
-    background-image: url('../AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('../AE_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
     color: #fff;
     height: 1vh;

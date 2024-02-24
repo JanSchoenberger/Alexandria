@@ -1,5 +1,5 @@
 body {
-    background-image: url("../AE_People_Quiz/images/Library_of_Alexandria_Background.png");
+    background-image: url("../AE_Quiz/images/Library_of_Alexandria_Background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,34 +14,13 @@ body {
     flex-direction: column;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
-
 header {
-    background-image: url('../AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('../AE_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
     color: #fff;
     padding: 10px 0;
     border-bottom: 1px solid white; /* Fügt einen weißen Rand hinzu */
     position: relative; /* Erlaubt es, das Logo relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
-}
-
-main{
-
-    flex-grow:1;
-
-}
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    display: flex;
-    padding: 0 1vw; /* 0 top and bottom padding, 1vw left and right padding */
-
-}
-
-.person {
-    margin-right: 1vw;
 }
 
 nav{
@@ -84,9 +63,16 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #6d2d2d; /* Farbe ändern bei Hover */
+    color: silver; /* Farbe ändern bei Hover */
     text-decoration: underline;
 }
+
+
+.person {
+    margin-right: 1vw;
+}
+
+
 
 
 #image-container{
@@ -96,26 +82,23 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.person img{  
+img{  
     /* Set the maximum height to 80% of the viewport height */
     width: auto;      /* This will maintain the aspect ratio of the image */
     height: auto;     /* This will maintain the aspect ratio of the image */
    /* This will ensure that the entire image is visible */
-    max-width: 45vw;  /* Set the maximum width to 80% of the viewport width. Hier ist irgend ein Problem mit dem Padding und den Anpassungen, ganz klar.*/
+    max-width: 45vw;  /* Set the maximum width to 80% of the viewport width */
     max-height: 45vh;
     
     margin-left: 4vw;
     margin-right: 4vw;
-    
 
 }
 
 .person {
     
-    
-    
-    background-image: url('../AE_People_Quiz/images/baroque_frame.png');
-    background-size: 100%;
+    background-image: url('../AE_Quiz/images/baroque_frame.png');
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
@@ -133,15 +116,13 @@ nav ul li a:hover {
     max-width: 30vw; /* Adjust as needed */
     max-height: 30vh;
     border-radius: 10px; /* Adjust as needed */
-    padding: 2px; /* Adjust as needed */
+    padding: 10px; /* Adjust as needed */
     display:block;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Parisienne', cursive;
     font-size: 2.5vh; /* oder größer, je nach Bedarf */
-    
-    
 }
 
 .logo {
@@ -180,7 +161,7 @@ footer {
     background-color: #ffffff;
     padding: 10px;
     text-align: center;
-    background-image: url('../AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('../AE_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
     color: #fff;
     height: 1vh;
