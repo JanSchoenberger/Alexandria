@@ -12,7 +12,7 @@
     RewriteRule ^login$ AE_Login/index.html [L]
 
     # Rules for other hosts
-    RewriteCond %{HTTP_HOST} !^localhost$
+    RewriteCond %{HTTP_HOST} ^home-5015158000\.app-ionos\.space$
     RewriteRule ^$ /index.html [L]
     RewriteRule ^quiz$ /AE_Quiz/index.html [L]
     RewriteRule ^dictionary$ /AE_Dictionary/index.html [L]
