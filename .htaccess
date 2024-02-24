@@ -1,7 +1,7 @@
 RewriteEngine On
-RewriteRule ^$ index.html [L]
-RewriteRule ^quiz$ AE_People_Quiz/ [L]
-RewriteRule ^dictionary$ AE_People_Dictionary/ [L]
-RewriteRule ^favoriten$ AE_Favoriten/ [L]
-RewriteRule ^quotes$ AE_Quotes/ [L]
-RewriteRule ^typing$ AE_Typing/ [L]
+RewriteRule ^$ ./index.html [L]
+RewriteRule ^quiz$ ./AE_People_Quiz/ [L]
+RewriteRule ^dictionary$ ./AE_People_Dictionary/ [L]
+RewriteRule ^favoriten$ ./AE_Favoriten/ [L]
+RewriteRule ^quotes$ ./AE_Quotes/ [L]
+RewriteRule ^typing$ ./AE_Typing/ [L]
