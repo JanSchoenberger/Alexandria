@@ -1,5 +1,5 @@
 body {
-    background-image: url("../AE_People_Quiz/images/Library_of_Alexandria_Background.png");
+    background-image: url("../AE_Quiz/images/Library_of_Alexandria_Background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@ body {
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 header {
-    background-image: url('../AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('../AE_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
     color: #fff;
     padding: 10px 0;
@@ -23,7 +23,7 @@ header {
     position: relative; /* Erlaubt es, das Logo relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
 }
 
-nav {
+nav{
     height: 4vh; 
 }
 
@@ -34,13 +34,15 @@ nav ul {
     text-align: center;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100%;
+    
+
 }
 
 nav ul li {
-    display: flex;
+    display: inline;
     margin-right: 20px;
 }
 
@@ -61,26 +63,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color:silver; /* Farbe ändern bei Hover */
+    color: silver; /* Farbe ändern bei Hover */
     text-decoration: underline;
 }
-
-nav ul .center-nav {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-}
-
-nav ul .login {
-    margin-left: auto;
-}
-
-nav ul .logo {
-    margin-right: auto;
-}
-
-
-
 
 
 
@@ -170,7 +155,7 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url('../AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('../AE_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
     border-radius: 10px;
 }
@@ -183,7 +168,7 @@ footer {
     background-color: #ffffff;
     padding: 10px;
     text-align: center;
-    background-image: url('../AE_People_Quiz/images/beige_marmor.png');
+    background-image: url('../AE_Quiz/images/beige_marmor.png');
     background-repeat: repeat;
     color: #fff;
     height: 1vh;

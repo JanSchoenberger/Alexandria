@@ -23,12 +23,6 @@ header {
     position: relative; /* Erlaubt es, das Logo relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
 }
 
-main{
-
-  
-
-}
-
 nav{
     height: 4vh; 
 }

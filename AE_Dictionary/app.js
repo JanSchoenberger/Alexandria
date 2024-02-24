@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
       // Create an img element for the person's picture
     const img = document.createElement('img');
-    img.src = '../AE_People_Quiz/images/' + imageDictionary[name]; // Adjust the path if necessary
+    img.src = './AE_Quiz/images/' + imageDictionary[name]; // Adjust the path if necessary
     img.alt = name;
 
     var p = document.createElement('p');
@@ -78,7 +78,7 @@ document.querySelector('img').addEventListener('click', function(event) {
 async function readJSON(filePath) {
     
   if (filePath === "random") {
-        const response = await fetch('../AE_People_Quiz/image_dictionary.json');
+        const response = await fetch('./AE_Quiz/image_dictionary.json');
         const data = await response.json();
         imageDictionary = data;
 
@@ -91,7 +91,7 @@ async function readJSON(filePath) {
     
     
     else {
-        const response = await fetch(`../AE_People_Quiz/kategories/${filePath}.json`);
+        const response = await fetch(`./AE_Quiz/kategories/${filePath}.json`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
