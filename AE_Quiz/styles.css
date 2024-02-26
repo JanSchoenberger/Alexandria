@@ -3,15 +3,12 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: auto;
-    min-height: 100vh; /* Set the height to 100% of the viewport height */
-    width: 100vw; /* Set the width to 100% of the viewport width */
-    flex-direction: column;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    /*Maximale Bildschimfäche*/
+    height: 100vh;
+    width: 100vw; 
+    
 }
 
 header {
@@ -23,6 +20,7 @@ header {
     position: relative; /* Erlaubt es, das Logo relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
 }
 
+/*Hier noch das Logo anpassen, darf maximal so hoch sein wie die Nav-Bar.*/
 nav{
     height: 4vh; 
 }
@@ -52,7 +50,7 @@ nav ul li a {
     
     font-weight: bold;
     font-size: 3vh;
-    font-family: Parisienne, cursive; /* This is an example of a cursive font */
+    font-family: Parisienne, cursive;
 
     text-shadow:  1px  1px 1px black,
                 1px -1px 1px black,
@@ -66,71 +64,73 @@ nav ul li a:hover {
     color: silver; /* Farbe ändern bei Hover */
     text-decoration: underline;
 }
-
-
-#image-container{
-     flex-wrap: wrap; /* Erlaubt den Bildern, in die nächste Zeile zu rücken, wenn der Platz nicht ausreicht */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('images/baroque_frame.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    
-    }
-
-img{
-    
-    max-width: 50vw;  
-    max-height: 50vh; 
-    width: fixed;      
-    height: fixed;     
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    
-
-}
-
 .logo {
 
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-right: 20px; /* Platz zwischen Logo und Menüelementen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-right: 20px; /* Platz zwischen Logo und Menüelementen */
 
 }
 
 .logo img {
-    max-width: 100%; /* Das Logo wird sich je nach Bildschirmgröße anpassen */
-    margin-top: 0px; /* Platz zwischen Logo und Menüelementen */
-    height: auto; /* Behält das Seitenverhältnis des Logos bei */
-    width: 50px; /* Setze die Breite des Logos für kleinere Bildschirme */
-    margin-right: 20px; /* Platz zwischen Logo und Menüelementen */
-    background-image: none;
+max-width: 100%; /* Das Logo wird sich je nach Bildschirmgröße anpassen */
+margin-top: 0px; /* Platz zwischen Logo und Menüelementen */
+max-height: 4vh; /* Behält das Seitenverhältnis des Logos bei */
+width: auto; /* Setze die Breite des Logos für kleinere Bildschirme */
+margin-right: 20px; /* Platz zwischen Logo und Menüelementen */
+background-image: none;
 }
 
 
-#text_input{
-
-    width: 25vw;; /* Set the width of the search box */
-    padding: 10px; /* Add some padding inside the search box */
-    font-size: 16px; /* Set the font size */
-    border: 1px solid #ddd; /* Add a border */
-    border-radius: 20px; /* Make the corners rounded */
-    font-family: Parisienne, cursive ; /* This is an example of a cursive font */
-    font-size: 2.3vh;
-
+.placeholder-for-proportion-test {
+    position: relative;
 }
 
-#search-container {
+#image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/baroque_frame.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+#image-container img {
+    max-width: 50vw;
+    max-height: 50vh;
+    width: fixed;
+    height: fixed;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.input-container {
     display: flex;
     justify-content: center;
     margin-bottom: 1vh;
-    position: relative;
-    
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 15vw;
+    max-height: 4.5vh;
 }
+
+#text_input {
+    width: 25vw;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-family: Parisienne, cursive;
+    font-size: 2.3vh;
+    text-align:center;
+}
+
+
 
 #highscore-container {
     display: flex;
