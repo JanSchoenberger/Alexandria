@@ -93,6 +93,7 @@ nav ul li a:hover {
 
 }
 
+/* Die Personen Klasse wird in JS gesetzt*/
 .person {
     margin-right: 1vw;
     background-image: url('../AE_Quiz/images/baroque_frame.png');
@@ -106,18 +107,22 @@ nav ul li a:hover {
 .person img{  
     /* Set the maximum height to 80% of the viewport height */
     width: auto;      /* This will maintain the aspect ratio of the image */
-    height: 50vh;     /* This will maintain the aspect ratio of the image */
+    height: auto;     /* This will maintain the aspect ratio of the image */
    /* This will ensure that the entire image is visible */
-    max-width: auto;  /* Set the maximum width to 80% of the viewport width. Hier ist irgend ein Problem mit dem Padding und den Anpassungen, ganz klar.*/
+    max-width: 45vw;  /* Set the maximum width to 80% of the viewport width. Hier ist irgend ein Problem mit dem Padding und den Anpassungen, ganz klar.*/
     max-height: 45vh;
     
     margin-left: 4vw;
     margin-right: 4vw;
     
+
 }
+
+
 
 .person p {
 
+    
     border: 2px solid white; /* Adjust as needed */
     background-color: white;
     height: 50%;
@@ -131,7 +136,9 @@ nav ul li a:hover {
     margin-left: auto;
     margin-right: auto;
     font-family: 'Parisienne', cursive;
-    font-size: 2.5vh; /* oder größer, je nach Bedarf */  
+    font-size: 2.5vh; /* oder größer, je nach Bedarf */
+    
+    
 }
 
 .logo {

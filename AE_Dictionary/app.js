@@ -16,29 +16,35 @@ document.addEventListener('DOMContentLoaded', async function() {
     await readJSON(categorySelect.value);
 
 
-    // Loop through the people
     for (let name in imageDictionary) {
-    // Create a new div element for the person
-    const personDiv = document.createElement('div');
-    personDiv.className = 'person';
-
+      // Create a new div element for the person
+      const personDiv = document.createElement('div');
+      personDiv.className = 'person';
+  
       // Create an img element for the person's picture
-    const img = document.createElement('img');
-    img.src = './AE_Quiz/images/' + imageDictionary[name]; // Adjust the path if necessary
-    img.alt = name;
-
-    var p = document.createElement('p');
-    p.textContent = name;
-      
-
-      // Textinput als Teil der Bilder ?
-
-      // Append the img element to the personDiv
-    personDiv.appendChild(img);
-    personDiv.appendChild(p);
+      const img = document.createElement('img');
+      img.src = './AE_Quiz/images/' + imageDictionary[name]; // Adjust the path if necessary
+      img.alt = name;
+  
+      // Create a new div for the img and append the img to it
+      const imgDiv = document.createElement('div');
+      imgDiv.id = 'personImage';
+      imgDiv.appendChild(img);
+  
+      var p = document.createElement('p');
+      p.textContent = name;
+  
+      // Create a new div for the p and append the p to it
+      const pDiv = document.createElement('div');
+      pDiv.id = 'personP';
+      pDiv.appendChild(p);
+  
+      // Append the imgDiv and pDiv to the personDiv
+      personDiv.appendChild(imgDiv);
+      personDiv.appendChild(pDiv);
+  
       // Append the personDiv to the gallery
-    gallery.appendChild(personDiv);
-
+      gallery.appendChild(personDiv);
     }
 
     document.querySelectorAll('img').forEach(function(img) {
