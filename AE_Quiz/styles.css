@@ -82,7 +82,6 @@ margin-right: 20px; /* Platz zwischen Logo und Menüelementen */
 background-image: none;
 }
 
-
 .placeholder-for-proportion-test {
     position: relative;
 }
@@ -129,8 +128,6 @@ background-image: none;
     font-size: 2.3vh;
     text-align:center;
 }
-
-
 
 #highscore-container {
     display: flex;
@@ -180,6 +177,32 @@ button:hover {
     font-family: Parisienne, cursive; /* This is an example of a cursive font */
     font-size: 3vh;
 }
+
+#infostand {
+    background-image: url('images/Infostand.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 3vh; /* Positioniert das Bild am unteren Rand des Containers */
+    left: 32vb; /* Positioniert das Bild am linken Rand des Containers */
+    width: 40vb; /* Breite des Bildes */
+    height:40vh; /* Höhe des Bildes */
+    z-index: 1; /* Stellt sicher, dass das Bild über anderen Elementen angezeigt wird */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Positioniert die Buttons am oberen Rand */
+    align-items: center;
+    padding: 0px;
+    padding-top: 20px;
+   
+}
+.button-row {
+    display: flex;
+    justify-content: center; /* Positioniert die Buttons näher zusammen */
+    width: 100%;
+
+}
+
 
 footer {
     display: flex;
