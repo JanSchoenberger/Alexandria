@@ -109,8 +109,6 @@ categorySelect.addEventListener('change', async function() {
     showRandomImage();
 });
 
-
-
 // Shotcut Fokus auf das Eingabefeld:
 document.addEventListener('keydown', function(event) {
     // Check if the pressed key is 'i' and the control key is held down
@@ -304,6 +302,7 @@ function addToFavorites(person) {
         let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         console.log(person)
         console.log(favorites)
+        
         // Check if the person is already in the favorites list
         
         if (!favorites.some(favorite => JSON.stringify(favorite) === JSON.stringify(person))) {
@@ -312,7 +311,20 @@ function addToFavorites(person) {
     
             // Save the updated favorites list back to Local Storage
             localStorage.setItem('favorites', JSON.stringify(favorites));
+            showSuccessMessageFavorites(Object.keys(person)[0]);
+            console.log("Wird aufgerufen" + Object.keys(person)[0])
         } else {
             console.log(person.name + ' is already in the favorites list');
         }
+    }
+    
+function showSuccessMessageFavorites(personName) {
+        const messageElement = document.getElementById('success-message');
+        messageElement.textContent = `Die Person ${personName} wurde zu den Favoriten hinzugefügt.`;
+        messageElement.style.display = 'block';
+    
+        // Meldung nach 3 Sekunden verstecken
+        setTimeout(() => {
+            messageElement.style.display = 'none';
+        }, 3000);
     }
