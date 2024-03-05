@@ -10,5 +10,6 @@
     RewriteRule ^favoriten$ /AE_Favoriten/index.html [L]
     RewriteRule ^quotes$ /AE_Quotes/index.html [L]
     RewriteRule ^typing$ /AE_Typing/index.html [L]
+    RewriteRule ^wordcounter$ /AE_Wordcounter/index.html [L]
     RewriteRule ^login$ /AE_Login/index.html [L]
 </IfModule>
