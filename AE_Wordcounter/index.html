@@ -10,7 +10,7 @@
     <link rel="icon" href="AE_Quiz/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./AE_Wordcounter/styles.css">
 </head>
 <body>
     <header>
@@ -23,7 +23,7 @@
                         <img src="AE_Quiz/images/favicon.png" alt="Logo">
                     </a>
                 </div>
-              <div class="center-nav">
+            <div class="center-nav">
                 <li><a href="./">Startseite</a></li>
                 <li><a href="quiz">Quiz</a></li>
                 <li><a href="dictionary">Dictionary</a></li>
@@ -41,9 +41,18 @@
     </header>
     
     <main>
+        
+        <div class="output-area">
+            <p>Wörter: <span id="wordCount">0</span></p>
+            <p>Buchstaben: <span id="letterCount">0</span></p>
+        </div>
 
+        <div class="input-area">
+            <textarea id="textInput" oninput="countWordsAndLetters()"></textarea>
+            <button id="submitButton">Submit</button>
+        </div>
+        
 
-    </div>  
     </main>
 
         <footer>
@@ -55,6 +64,8 @@
                 </ul>
             </nav>
         </footer>
+
+        <script src="./AE_Wordcounter/app.js"></script>
 
 </body>
 </html>

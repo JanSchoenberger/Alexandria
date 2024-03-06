@@ -68,11 +68,28 @@ nav ul li a:hover {
 }
 
 
-.person {
-    margin-right: 1vw;
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+.input-area textarea {
+    width: 300px;
+    height: 150px;
+    margin-top: 20px;
+    
+}
 
+.output-area {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: white;
+}
 
 
 #image-container{
@@ -95,35 +112,6 @@ img{
 
 }
 
-.person {
-    
-    background-image: url('../AE_Quiz/images/baroque_frame.png');
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    display: block;
-
-}
-
-.person p {
-
-    
-    border: 2px solid white; /* Adjust as needed */
-    background-color: white;
-    height: 50%;
-    width: 50%;
-    max-width: 30vw; /* Adjust as needed */
-    max-height: 30vh;
-    border-radius: 10px; /* Adjust as needed */
-    padding: 10px; /* Adjust as needed */
-    display:block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Parisienne', cursive;
-    font-size: 2.5vh; /* oder größer, je nach Bedarf */
-}
 
 .logo {
 
@@ -141,17 +129,6 @@ img{
     width: 50px; /* Setze die Breite des Logos für kleinere Bildschirme */
     margin-right: 20px; /* Platz zwischen Logo und Menüelementen */
     background-image: none;
-}
-
-#category-select {
-    width: 10vw; /* Setzen Sie die Breite auf die gewünschte Breite des Buttons */
-    height: 5vh;
-    border-radius: 10px; /* Fügt abgerundete Ecken hinzu */
-    position: absolute; /* Erlaubt es, das Menü relativ zum nächstgelegenen positionierten Vorfahren zu positionieren (anstatt relativ zum Viewport) */
-    top: 100px; /* Positioniert das Menü direkt unter der Navigationsleiste */
-    left: 20px; /* Positioniert das Menü am linken Rand des Bildschirms */
-    font-family: Parisienne, cursive; /* This is an example of a cursive font */
-    font-size: 3vh;
 }
 
 footer {
