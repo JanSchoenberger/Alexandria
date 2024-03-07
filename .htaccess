@@ -2,6 +2,10 @@
     RewriteEngine On
 
 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+
     RewriteCond %{HTTP_HOST} ^localhost$ [NC]
     RewriteRule ^$ ./index.html [L]
     RewriteRule ^quiz$ ./AE_Quiz/index.html [L]
@@ -12,8 +16,8 @@
     RewriteRule ^wordcounter$ ./AE_Wordcounter/index.html [L]
     RewriteRule ^login$ ./AE_Login/index.html [L]
 
-
-    RewriteCond %{HTTP_HOST} ^home-5015158000.app-ionos.space$ [NC]
+    # Rules for other hosts
+    RewriteCond %{HTTP_HOST} ^home-5015158000\.app-ionos\.space$
     RewriteRule ^$ /index.html [L]
     RewriteRule ^quiz$ /AE_Quiz/index.html [L]
     RewriteRule ^dictionary$ ./AE_Dictionary/index.html [L]
@@ -22,4 +26,5 @@
     RewriteRule ^typing$ /AE_Typing/index.html [L]
     RewriteRule ^wordcounter$ /AE_Wordcounter/index.html [L]
     RewriteRule ^login$ /AE_Login/index.html [L]
+</IfModule>
 </IfModule>
