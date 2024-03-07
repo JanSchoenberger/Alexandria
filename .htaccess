@@ -34,4 +34,3 @@
     #RewriteCond %{HTTP_HOST} ^home-5015158000\.app-ionos\.space$
     
 </IfModule>
-
