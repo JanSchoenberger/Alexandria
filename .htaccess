@@ -1,11 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-
-
     RewriteCond %{HTTP_HOST} ^localhost$ [NC]
     RewriteRule ^$ ./index.html [L]
     RewriteRule ^quiz$ ./AE_Quiz/index.html [L]
@@ -27,4 +22,4 @@
     RewriteRule ^wordcounter$ /AE_Wordcounter/index.html [L]
     RewriteRule ^login$ /AE_Login/index.html [L]
 </IfModule>
-</IfModule>
+
