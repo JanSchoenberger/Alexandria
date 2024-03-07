@@ -10,7 +10,7 @@
     <link rel="icon" href="AE_Quiz/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./AE_Wordcounter/styles.css">
 </head>
 <body>
     <header>
@@ -23,7 +23,7 @@
                         <img src="AE_Quiz/images/favicon.png" alt="Logo">
                     </a>
                 </div>
-              <div class="center-nav">
+            <div class="center-nav">
                 <li><a href="./">Startseite</a></li>
                 <li><a href="quiz">Quiz</a></li>
                 <li><a href="dictionary">Dictionary</a></li>
@@ -41,42 +41,18 @@
     </header>
     
     <main>
-
-    <div class="mainContent">
-        <div class="header-container">
-            <h1>Willkommen bei Alexandria!</h1>
+        
+        <div class="output-area">
+            <p>Wörter: <span id="wordCount">0</span></p>
+            <p>Buchstaben: <span id="letterCount">0</span></p>
         </div>
 
-        <div class="button-row">
-            <a href="quiz"><button class="button">
-                <div><i class="fas fa-question-circle"></i></div>
-                <div>Quiz</div>
-            </button></a>
-            <a href="dictionary"><button class="button">
-                <div><i class="fas fa-book"></i></div>
-                <div>Dictionary</div>
-            </button></a>
-            <a href="favoriten"><button class="button">
-                <div><i class="fas fa-star"></i></div>
-                <div>Favoriten</div>
-            </button></a>
+        <div class="input-area">
+            <textarea id="textInput" oninput="countWordsAndLetters()"></textarea>
+            <button id="submitButton">Submit</button>
         </div>
-        <div class="button-row">
-            <a href="quotes"><button class="button">
-                <div><i class="fas fa-quote-right"></i></div>
-                <div>Quotes</div>
-            </button></a>
-            <a href="typing"><button class="button">
-                <div><i class="fas fa-keyboard"></i></div>
-                <div>Typing</div>
-            </button></a>
-            <a href="wordcounter"><button class="button">
-                <div><i class="fas fa-calculator"></i></div>
-                <div>Wordcounter</div>
-            </button></a>
-        </div>
+        
 
-    </div>  
     </main>
 
         <footer>
@@ -88,6 +64,8 @@
                 </ul>
             </nav>
         </footer>
+
+        <script src="./AE_Wordcounter/app.js"></script>
 
 </body>
 </html>

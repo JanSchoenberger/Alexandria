@@ -22,7 +22,7 @@ function displayFavorites(favorites) {
         let value = keyValue[key];
         console.log(key);
         console.log(value);
-        img.src = './AE_Quiz/' + value; // Adjust the path if necessary
+        img.src = value; // Adjust the path if necessary,  './AE_Quiz/' +
         img.alt = key;
 
         var p = document.createElement('p');
