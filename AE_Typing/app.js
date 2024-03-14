@@ -29,15 +29,19 @@ document.getElementById('wordInput').addEventListener('input', function(event) {
     }
 });*/
 
+// Hier liegt derzeit sehr klar noch ein großer Fehler.
 document.getElementById('wordInput').addEventListener('keyup', function(event) {
+    
     if (event.key !== ' ') {
         return;
     }
 
-    const inputWords = event.target.value.trim().split(' ');
-    const displayRows = Array.from(document.getElementById('wordDisplay').children);
+    const inputWords = event.target.value.trim().split(' '); // Funktioniert. Sollte nur ein Word sein, und kann schon in den Loop.
+    console.log(inputWords);
+    const displayRows = Array.from(document.getElementsByClassName('word-row'));
+    console.log(displayRows);
 
-    for (let i = 0; i < inputWords.length; i++) {
+    for (let i = 0; i < displayRows.length; i++) {
         const displayWords = Array.from(displayRows[i].children);
         for (let j = 0; j < displayWords.length; j++) {
             if (inputWords[i] === displayWords[j].innerText) {
@@ -58,8 +62,6 @@ document.getElementById('wordInput').addEventListener('keyup', function(event) {
     }
 });
 
-
-
 async function fetchWords() {
     fetch('./AE_Typing/words.json')
     .then(response => response.json())
@@ -77,10 +79,13 @@ function limitWords(words, start, limit) {
 
 function displayRandomWords(words) {
     const limitedWords = limitWords(words, displayIndex, 20);
+    //console.log(limitedWords);
     let wordGroups = [];
     for (let i = 0; i < limitedWords.length; i += 10) {
         let group = limitedWords.slice(i, i + 10);
+        //console.log(group);
         let groupHTML = group.map(word => `<span class="word">${word}</span>`).join('');
+        //console.log(groupHTML);
         wordGroups.push(`<div class="word-row">${groupHTML}</div>`);
     }
     document.getElementById('wordDisplay').innerHTML = wordGroups.join('');
