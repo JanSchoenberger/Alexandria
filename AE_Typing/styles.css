@@ -68,7 +68,20 @@ nav ul li a:hover {
 }
 
 
-
+#scoreDisplay {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3vh;
+    background-color: white;
+    padding: 20px;
+    width: 10%;
+    height: auto;
+    text-align: center;
+    font-size: 4vh;
+    font-family: Parisienne, cursive;
+}
 
 
 #wordDisplay {
@@ -88,7 +101,7 @@ nav ul li a:hover {
 
 #wordInput {
     position: absolute;
-    top: calc(50% + 2em);
+    top: calc(50% + 5em);
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 4vh;
