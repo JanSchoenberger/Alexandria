@@ -79,16 +79,36 @@ main {
 }
 
 .input-area textarea {
-    width: 300px;
-    height: 150px;
-    margin-top: 20px;
+    width: 25vw;
+    padding: 10px;
+    font-size: 4vh;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-family: Parisienne, cursive;
+    text-align:center;
     
 }
 
 .output-area {
     margin-bottom: 20px;
+    border-radius: 20px;
+    width: 15%;
+    font-family: Parisienne, cursive;
+    font-size: 4vh;
     text-align: center;
     background-color: white;
+}
+
+#submitButton{
+
+
+    border-radius: 20px;
+
+    width: 5%;
+    height:2%;
+    font-family: Parisienne, cursive;
+    font-size: 4vh;
+
 }
 
 
